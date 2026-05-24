@@ -111,7 +111,6 @@ if [ $? -eq 0 ]; then
     chmod +x ~/.dotfiles/.config/rofi/network-manager.sh
     chmod +x ~/.dotfiles/.config/rofi/rofi-power-menu.sh
     chmod +x ~/.dotfiles/.config/hypr/show_layout_popup.sh
-    chmod +x ~/.dotfiles/.config/hypr/hyprpicker.sh
 
     stow -d ~/.dotfiles/ .
 
@@ -142,8 +141,6 @@ if [ $? -eq 0 ]; then
     xdg-mime default firefox.desktop text/html
     
     systemctl --user enable hyprpolkitagent.service
-    
-    xrandr --output DP-1 --primary
 
     sleep 1
     echo "System was configured"
