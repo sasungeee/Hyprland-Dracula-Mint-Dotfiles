@@ -102,6 +102,17 @@ if [ $? -eq 0 ]; then
     echo "SDDM was configured"
     echo " "
 
+    # Firefox polices
+
+    echo "Configuring firefox polices"
+    echo " "
+
+    sudo cp -rf ~/Hyprland-Dracula-Mint-Dotfiles/Dotfiles/firefox /etc/firefox
+
+    sleep 1
+    echo "Firefox polices was configured"
+    echo " "
+
     # Dotfiles
 
     echo "Set up dotfiles"
