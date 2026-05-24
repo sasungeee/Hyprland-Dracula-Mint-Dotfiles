@@ -11,3 +11,7 @@ user_pref("browser.newtabpage.activity-stream.default.sites", "");
 
 // Integrated calculator at urlbar
 user_pref("browser.urlbar.suggest.calculator", true);
+
+user_pref("middlemouse.paste", false);
+user_pref("clipboard.autocopy", false);
+user_pref("middlemouse.contentLoadURL", false);
