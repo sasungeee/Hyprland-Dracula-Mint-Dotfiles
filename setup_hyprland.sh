@@ -121,6 +121,7 @@ if [ $? -eq 0 ]; then
     cp -rf ~/Hyprland-Dracula-Mint-Dotfiles/Dotfiles/.dotfiles ~/
     chmod +x ~/.dotfiles/.config/rofi/network-manager.sh
     chmod +x ~/.dotfiles/.config/rofi/rofi-power-menu.sh
+    chmod +x ~/.dotfiles/.config/hypr/rofi-power-menu-alt-f4.sh
     chmod +x ~/.dotfiles/.config/hypr/show_layout_popup.sh
 
     stow -d ~/.dotfiles/ .
