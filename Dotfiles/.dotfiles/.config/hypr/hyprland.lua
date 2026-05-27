@@ -188,7 +188,7 @@ hl.bind(mainMod .. " + PERIOD", hl.dsp.exec_cmd('rofi -modi emoji -show emoji -k
 hl.bind("ALT + F4", hl.dsp.exec_cmd("~/.config/rofi/rofi-power-menu-alt-f4.sh"))
 hl.bind("ALT + 4", hl.dsp.exec_cmd("~/.config/rofi/rofi-power-menu-alt-f4.sh"))
 
-hl.bind("CAPS", hl.dsp.exec_cmd("bash -c 'sleep 0.1; swayosd-client --caps-lock'"))
+hl.bind("Caps_Lock", hl.dsp.exec_cmd("swayosd-client --caps-lock"), { release = true, ignore_mods = true })
 
 hl.bind(mainMod .. " + SHIFT + O", hl.dsp.exec_cmd('hyprctl clients | grep "title:" > /home/user/a.txt'))
 
