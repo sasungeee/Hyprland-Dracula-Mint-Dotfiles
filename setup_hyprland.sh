@@ -51,9 +51,9 @@ if [ $? -eq 0 ]; then
 
             # Instalation of the additional software packages
 
-            sudo pacman -Sy --noconfirm syncthing feishin telegram-desktop discord chromium wine winetricks kolourpaint vivaldi krita torbrowser-launcher audacity kdiskmark gamescope mangohud qemu-full obsidian helvum libreoffice-still kdenlive steam qbittorrent
+            sudo pacman -Sy --noconfirm syncthing telegram-desktop discord chromium wine winetricks kolourpaint vivaldi krita torbrowser-launcher audacity kdiskmark gamescope mangohud qemu-full obsidian helvum libreoffice-still kdenlive steam qbittorrent
 
-            yay -S --noconfirm elyprismlauncher-bin viber adwsteamgtk betterdiscordctl zoom onlyoffice-bin portproton
+            yay -S --noconfirm elyprismlauncher-bin feishin viber adwsteamgtk betterdiscordctl zoom onlyoffice-bin portproton
 
             flatpak install flathub com.obsproject.Studio com.github.wwmm.easyeffects -y
 
