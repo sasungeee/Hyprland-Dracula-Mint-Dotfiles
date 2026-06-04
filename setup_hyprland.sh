@@ -51,7 +51,7 @@ if [ $? -eq 0 ]; then
 
             # Instalation of the additional software packages
 
-            sudo pacman -Sy --noconfirm telegram-desktop discord chromium wine winetricks kolourpaint vivaldi krita torbrowser-launcher audacity kdiskmark gamescope mangohud qemu-full obsidian helvum libreoffice-still kdenlive steam qbittorrent
+            sudo pacman -Sy --noconfirm syncthing feishin telegram-desktop discord chromium wine winetricks kolourpaint vivaldi krita torbrowser-launcher audacity kdiskmark gamescope mangohud qemu-full obsidian helvum libreoffice-still kdenlive steam qbittorrent
 
             yay -S --noconfirm elyprismlauncher-bin viber adwsteamgtk betterdiscordctl zoom onlyoffice-bin portproton
 
@@ -153,6 +153,15 @@ if [ $? -eq 0 ]; then
     xdg-mime default firefox.desktop text/html
     
     systemctl --user enable hyprpolkitagent.service
+    
+    case $CHOICE in
+        Full)
+            systemctl --user enable syncthing.service
+            ;;
+        Minimal)
+            echo ""
+            ;;
+    esac
 
     sleep 1
     echo "System was configured"
