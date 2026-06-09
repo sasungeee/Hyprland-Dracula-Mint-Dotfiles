@@ -151,6 +151,8 @@ if [ $? -eq 0 ]; then
     xdg-mime default nemo.desktop inode/directory application/x-gnome-saved-search
     xdg-mime default firefox.desktop x-scheme-handler/https
     xdg-mime default firefox.desktop text/html
+
+    sudo setcap 'CAP_SYS_NICE=eip' $(which gamescope)
     
     systemctl --user enable hyprpolkitagent.service
     
