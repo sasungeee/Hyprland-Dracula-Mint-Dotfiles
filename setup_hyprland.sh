@@ -53,7 +53,7 @@ if [ $? -eq 0 ]; then
 
             sudo pacman -Sy --noconfirm syncthing telegram-desktop discord chromium wine winetricks kolourpaint vivaldi krita torbrowser-launcher audacity kdiskmark gamescope mangohud qemu-full obsidian helvum libreoffice-still kdenlive steam qbittorrent zerotier-one
 
-            yay -S --noconfirm elyprismlauncher-bin feishin viber adwsteamgtk betterdiscordctl zoom onlyoffice-bin portproton
+            yay -S --noconfirm elyprismlauncher-bin feishin viber adwsteamgtk betterdiscordctl zoom onlyoffice-bin portproton feishin
 
             flatpak install flathub com.obsproject.Studio com.github.wwmm.easyeffects -y
 
