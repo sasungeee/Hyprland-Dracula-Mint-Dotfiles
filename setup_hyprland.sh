@@ -51,7 +51,7 @@ if [ $? -eq 0 ]; then
 
             # Instalation of the additional software packages
 
-            sudo pacman -Sy --noconfirm syncthing telegram-desktop discord chromium wine winetricks kolourpaint vivaldi krita torbrowser-launcher audacity kdiskmark gamescope mangohud qemu-full obsidian helvum libreoffice-still kdenlive steam qbittorrent
+            sudo pacman -Sy --noconfirm syncthing telegram-desktop discord chromium wine winetricks kolourpaint vivaldi krita torbrowser-launcher audacity kdiskmark gamescope mangohud qemu-full obsidian helvum libreoffice-still kdenlive steam qbittorrent zerotier-one
 
             yay -S --noconfirm elyprismlauncher-bin feishin viber adwsteamgtk betterdiscordctl zoom onlyoffice-bin portproton
 
@@ -157,6 +157,7 @@ if [ $? -eq 0 ]; then
     case $CHOICE in
         Full)
             systemctl --user enable syncthing.service
+            systemctl enable zerotier-one
             ;;
         Minimal)
             echo ""
