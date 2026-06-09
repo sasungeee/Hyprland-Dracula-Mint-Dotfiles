@@ -57,6 +57,8 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("waybar --config ~/.config/waybar/config.jsonc --style ~/.config/waybar/style.css")
   hl.exec_cmd("waybar --config ~/.config/waybar/config-second.jsonc --style ~/.config/waybar/style.css")
 
+  hl.exec_cmd("feishin")
+
 end)
 
 
@@ -234,7 +236,7 @@ hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("swayosd-client --output-volume raise --max-volume 100"),       { locked = true, repeating = true })
 hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("swayosd-client --output-volume lower --max-volume 100"),       { locked = true, repeating = true })
-hl.bind("XF86AudioMute",        hl.dsp.exec_cmd("swayosd-client --output-volume mute-toggle --max-volume 100"), { locked = true, repeating = true })
+hl.bind("XF86AudioMute",        hl.dsp.exec_cmd("playerctl --all-players pause"), { locked = true, repeating = true })
 
 
 -- Windowrules -----------------
@@ -380,9 +382,15 @@ hl.window_rule({
     workspace = 9
 })
 
--- ZOOM annotate
 hl.window_rule({
     name = "windowrule-16",
+    match = { class = "feishin" },
+    workspace = 10
+})
+
+-- ZOOM annotate
+hl.window_rule({
+    name = "windowrule-17",
     match = { title = "annotate_toolbar" },
     float = true,
     no_anim = true,
@@ -390,3 +398,5 @@ hl.window_rule({
     size = "50 50",
     move = "35 ((monitor_h * 1) - 145)"
 })
+
+
