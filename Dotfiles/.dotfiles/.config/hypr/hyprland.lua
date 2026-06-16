@@ -195,8 +195,8 @@ hl.bind("Caps_Lock", hl.dsp.exec_cmd("swayosd-client --caps-lock"), { release = 
 hl.bind(mainMod .. " + SHIFT + O", hl.dsp.exec_cmd('hyprctl clients | grep "title:" > /home/user/a.txt'))
 
 -- screenshots
-hl.bind("Print", hl.dsp.exec_cmd("flameshot gui"))
-hl.bind("SHIFT + Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f -'))
+hl.bind("SHIFT + Print", hl.dsp.exec_cmd("flameshot gui"))
+hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f -'))
 
 -- hyprland
 
