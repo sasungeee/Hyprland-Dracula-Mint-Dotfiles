@@ -24,7 +24,7 @@
  - OS: [**`Arch Linux`**](https://archlinux.org/)
  - WM: [**`Hyprland`**](https://github.com/hyprwm/Hyprland)
  - Bar: [**`Waybar`**](https://github.com/Alexays/Waybar)
- - Terminal: [**`Alacritty`**](https://github.com/alacritty/alacritty)
+ - Terminal: [**`Foot`**](https://codeberg.org/dnkl/foot)
  - App Launcher: [**`Rofi`**](https://github.com/davatorium/rofi)
  - Notify Daemon: [**`Mako`**](https://github.com/emersion/mako)
  - Shell: [**`Fish`**](https://github.com/fish-shell/fish-shell)
