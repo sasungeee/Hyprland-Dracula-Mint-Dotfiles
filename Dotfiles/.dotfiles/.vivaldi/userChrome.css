@@ -27,25 +27,27 @@ body {
 .tab-position .tab.active {
   background-color: rgba(37, 164, 135, 0.15) !important;
   border: 1px solid #25a487 !important;
-  border-radius: 10px !important;
+  border-radius: 5px !important;
+  color: #ffffff !important;
 }
 
 .tab-position .tab.active:hover {
   background-color: rgba(37, 164, 135, 0.15) !important;
   border: 1px solid #25a487 !important;
-  border-radius: 10px !important;
+  border-radius: 5px !important;
+  color: #ffffff !important;
 }
 
 .tab-position .tab {
   background-color: transparent !important;
   border: none !important;
-  border-radius: 10px !important;
+  border-radius: 5px !important;
 }
 
 .tab-position .tab:hover {
   background-color: #292d3e !important;
   border: none !important;
-  border-radius: 10px !important;
+  border-radius: 5px !important;
 }
 
 .top {
@@ -57,7 +59,7 @@ body {
 /*.toolbar > .button_toolbar:hover {
   background-color: #292d3e !important;
   border: none !important;
-  border-radius: 10px !important;
+  border-radius: 5px !important;
 }*/
 
 /* Основная панель инструментов (адресная строка) */
@@ -74,7 +76,7 @@ body {
 .UrlBar-AddressField {
   background-color: #292d3e !important;
   border: none !important;
-  border-radius: 10px !important;
+  border-radius: 5px !important;
 }
 
 /* Эффект при наведении на кнопки навигации */
@@ -82,15 +84,15 @@ body {
 /*.ToolbarButton-Button[name="Back"]:hover, 
 .ToolbarButton-Button[name="Forward"]:hover {
   background-color: #292d3e !important;
-  border-radius: 10px !important;
+  border-radius: 5px !important;
 }*/
 
 .ToolbarButton-Button:hover {
   background-color: #292d3e !important;
-  border-radius: 10px !important;
+  border-radius: 5px !important;
 }
 
 .vivaldi:hover {
-  border-radius: 10px !important;
+  border-radius: 5px !important;
   background-color: #292d3e !important;
 }
