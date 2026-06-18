@@ -5,6 +5,18 @@
 .tab-background[selected] {
   background-color: rgba(37, 164, 135, 0.15) !important;
   border: 1px solid #25a487 !important;
+  border-radius: 5px !important;
+  color: #c5c8c6 !important;
+}
+
+.tabbrowser-tab:not([selected="true"]):hover .tab-background {
+  background-color: #292d3e !important;
+  border-radius: 5px !important;
+}
+
+#tabs-newtab-button:hover > .toolbarbutton-icon {
+  background-color: #292d3e !important;
+  border-radius: 5px !important;
 }
 
 #TabsToolbar {
@@ -30,19 +42,54 @@
 #back-button > .toolbarbutton-icon {
   list-style-image: none !important;
   background: url(icons/back.svg) center center no-repeat !important;
-  background-size: 14px 14px !important;
-}
-
-#back-button:hover > .toolbarbutton-icon {
-  background-color: #42444d !important;
 }
 
 #forward-button > .toolbarbutton-icon {
   list-style-image: none !important;
   background: url(icons/forward.svg) center center no-repeat !important;
-  background-size: 14px 14px !important;
 }
 
-#forward-button:hover > .toolbarbutton-icon {
-  background-color: #42444d !important;
+#nav-bar-customization-target > .toolbarbutton-1 > .toolbarbutton-icon {
+  background-size: 14px 14px !important;
+  border-radius: 5px !important;
+}
+
+#nav-bar-customization-target > .toolbarbutton-1:hover > .toolbarbutton-icon {
+  background-color: #292d3e !important;
+}
+
+#nav-bar-customization-target > .chromeclass-toolbar-additional > .toolbarbutton-1 > .toolbarbutton-icon {
+  background-size: 14px 14px !important;
+  border-radius: 5px !important;
+}
+
+#nav-bar-customization-target > .chromeclass-toolbar-additional > .toolbarbutton-1:hover > .toolbarbutton-icon {
+  background-color: #292d3e !important;
+}
+
+#nav-bar-customization-target > .chromeclass-toolbar-additional > .unified-extensions-item-row-wrapper > .toolbarbutton-1 > .toolbarbutton-badge-stack > .toolbarbutton-icon {
+  background-size: 14px 14px !important;
+  border-radius: 5px !important;
+}
+
+#nav-bar-customization-target > .chromeclass-toolbar-additional > .unified-extensions-item-row-wrapper > .toolbarbutton-1:hover > .toolbarbutton-badge-stack > .toolbarbutton-icon {
+  background-color: #292d3e !important;
+}
+
+#PanelUI-menu-button > .toolbarbutton-badge-stack > .toolbarbutton-icon {
+  background-size: 14px 14px !important;
+  border-radius: 5px !important;
+}
+
+#PanelUI-menu-button:hover > .toolbarbutton-badge-stack > .toolbarbutton-icon {
+  background-color: #292d3e !important;
+}
+
+#star-button-box {
+  background-size: 14px 14px !important;
+  border-radius: 5px !important;
+}
+
+#star-button-box:hover {
+  background-color: #292d3e !important;
 }
