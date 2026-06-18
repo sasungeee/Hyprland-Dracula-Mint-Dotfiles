@@ -67,21 +67,21 @@
   background-color: #292d3e !important;
 }
 
-#nav-bar-customization-target > .chromeclass-toolbar-additional > .unified-extensions-item-row-wrapper > .toolbarbutton-1 > .toolbarbutton-badge-stack > .toolbarbutton-icon {
+#nav-bar-customization-target > .chromeclass-toolbar-additional > .unified-extensions-item-row-wrapper > .toolbarbutton-1 > .toolbarbutton-badge-stack {
   background-size: 14px 14px !important;
   border-radius: 5px !important;
 }
 
-#nav-bar-customization-target > .chromeclass-toolbar-additional > .unified-extensions-item-row-wrapper > .toolbarbutton-1:hover > .toolbarbutton-badge-stack > .toolbarbutton-icon {
+#nav-bar-customization-target > .chromeclass-toolbar-additional > .unified-extensions-item-row-wrapper > .toolbarbutton-1:hover > .toolbarbutton-badge-stack {
   background-color: #292d3e !important;
 }
 
-#PanelUI-menu-button > .toolbarbutton-badge-stack > .toolbarbutton-icon {
+#PanelUI-menu-button > .toolbarbutton-badge-stack {
   background-size: 14px 14px !important;
   border-radius: 5px !important;
 }
 
-#PanelUI-menu-button:hover > .toolbarbutton-badge-stack > .toolbarbutton-icon {
+#PanelUI-menu-button:hover > .toolbarbutton-badge-stack {
   background-color: #292d3e !important;
 }
 
