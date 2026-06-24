@@ -26,9 +26,9 @@ hl.workspace_rule({ workspace = "5", monitor = "DP-1" })
 hl.workspace_rule({ workspace = "6", monitor = "DP-1" })
 hl.workspace_rule({ workspace = "7", monitor = "DP-1" })
 
-hl.workspace_rule({ workspace = "8", monitor = "DVI-D-1" })
-hl.workspace_rule({ workspace = "9", monitor = "DVI-D-1" })
-hl.workspace_rule({ workspace = "10", monitor = "DVI-D-1" })
+hl.workspace_rule({ workspace = "8", monitor = "DVI-D-1", layout = "scrolling" })
+hl.workspace_rule({ workspace = "9", monitor = "DVI-D-1", layout = "scrolling" })
+hl.workspace_rule({ workspace = "10", monitor = "DVI-D-1", layout = "scrolling" })
 
 
 -- Programs -----------------
@@ -51,14 +51,17 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("swaybg -i ~/.config/bgimages/BG.jpg")
 
   hl.exec_cmd("Telegram")
+  hl.exec_cmd("org.telegram.desktop")
   hl.exec_cmd("discord")
   hl.exec_cmd("firefox")
 
   hl.exec_cmd("waybar --config ~/.config/waybar/config.jsonc --style ~/.config/waybar/style.css")
   hl.exec_cmd("waybar --config ~/.config/waybar/config-second.jsonc --style ~/.config/waybar/style.css")
-
   hl.exec_cmd("feishin")
 
+  hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+  hl.exec_cmd("systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+  hl.exec_cmd("systemctl --user start graphical-session.target")
 end)
 
 
@@ -131,12 +134,19 @@ hl.config({
         smart_split = false,
     },
 
+    scrolling = {
+        fullscreen_on_one_column = true,
+        column_width = 0.99,
+        follow_min_visible = 1,
+        explicit_column_widths = "0.5, 0.75, 0.99",
+        focus_fit_method = 1
+    },
+
     misc = {
 
         force_default_wallpaper = 0,
         disable_hyprland_logo   = true,
         middle_click_paste = false,
-        
     },
 
     input = {
@@ -158,6 +168,10 @@ hl.config({
     cursor = {
         no_warps = true,
         no_hardware_cursors = 1,
+    },
+    
+    binds = {
+        scroll_event_delay = 50,
     }
 })
 
@@ -187,6 +201,7 @@ hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("~/.config/hypr/show_layout_popup
 hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd("hyprpicker -n"))
 
 hl.bind(mainMod .. " + PERIOD", hl.dsp.exec_cmd('rofi -modi emoji -show emoji -kb-secondary-copy "" -kb-custom-1 Ctrl+c -theme ~/.config/rofi/launchers/type-7/style-2.rasi'))
+
 hl.bind("ALT + F4", hl.dsp.exec_cmd("~/.config/rofi/rofi-power-menu-alt-f4.sh"))
 hl.bind("ALT + 4", hl.dsp.exec_cmd("~/.config/rofi/rofi-power-menu-alt-f4.sh"))
 
@@ -195,8 +210,8 @@ hl.bind("Caps_Lock", hl.dsp.exec_cmd("swayosd-client --caps-lock"), { release = 
 hl.bind(mainMod .. " + SHIFT + O", hl.dsp.exec_cmd('hyprctl clients | grep "title:" > /home/user/a.txt'))
 
 -- screenshots
-hl.bind("SHIFT + Print", hl.dsp.exec_cmd("flameshot gui"))
-hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f -'))
+hl.bind("Print", hl.dsp.exec_cmd("flameshot gui"))
+hl.bind("SHIFT + Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f -'))
 
 -- hyprland
 
@@ -220,6 +235,9 @@ hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
+
+hl.bind(mainMod .. " + mouse_up", hl.dsp.layout("move +col"))
+hl.bind(mainMod .. " + mouse_down", hl.dsp.layout("move -col"))
 
 -- Switch & Move window to workspace
 for i = 1, 10 do
@@ -361,7 +379,7 @@ hl.window_rule({
 hl.window_rule({
     name = "windowrule-12",
     match = { class = "firefox" },
-    workspace = 8
+    workspace = 8,
 })
 
 hl.window_rule({
@@ -373,7 +391,8 @@ hl.window_rule({
 hl.window_rule({
     name = "windowrule-14",
     match = { class = "org.telegram.desktop" },
-    workspace = 9
+    workspace = 9,
+    scrolling_width = 0.355
 })
 
 hl.window_rule({
@@ -382,15 +401,9 @@ hl.window_rule({
     workspace = 9
 })
 
-hl.window_rule({
-    name = "windowrule-16",
-    match = { class = "feishin" },
-    workspace = 10
-})
-
 -- ZOOM annotate
 hl.window_rule({
-    name = "windowrule-17",
+    name = "windowrule-16",
     match = { title = "annotate_toolbar" },
     float = true,
     no_anim = true,
@@ -399,4 +412,8 @@ hl.window_rule({
     move = "35 ((monitor_h * 1) - 145)"
 })
 
-
+hl.window_rule({
+    name = "windowrule-17",
+    match = { class = "feishin" },
+    workspace = 10
+})
