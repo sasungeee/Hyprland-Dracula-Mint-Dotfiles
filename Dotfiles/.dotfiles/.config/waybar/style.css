@@ -34,7 +34,7 @@ label:focus {
 	margin: 4px 0px 4px 0px;
 	padding-left: 5px;
 	padding-right: 5px;
-	border-radius: 6px;
+	border-radius: 5px;
 }
 
 #workspaces button {
@@ -92,7 +92,7 @@ label:focus {
     background-color: #2b2d36;
     margin: 4px 0px 4px 0px;
     padding-right: 5px;
-    border-radius: 6px;
+    border-radius: 5px;
 }
 
 #cpu {
