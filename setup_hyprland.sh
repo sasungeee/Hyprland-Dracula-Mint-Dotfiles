@@ -183,6 +183,25 @@ if [ $? -eq 0 ]; then
     echo " "
 
     echo "Hyprland was successfully installed"
+    echo " "
+
+    if whiptail --title "NVIDIA Driver" \
+        --yesno "Install NVIDIA 580 driver?" 10 60; then
+    
+        echo "Installing NVIDIA 580 driver..."
+    
+        chmod +x ./install-nvidia-580.sh
+        ./install-nvidia-580.sh
+    
+        if [ $? -eq 0 ]; then
+            echo "NVIDIA driver installed successfully"
+        else
+            echo "Error installing NVIDIA driver"
+        fi
+    
+    else
+        echo "NVIDIA driver installation skipped"
+    fi
 
 else
     echo "Installation cancelled"
