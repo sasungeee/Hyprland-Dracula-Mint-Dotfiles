@@ -51,11 +51,23 @@ if [ $? -eq 0 ]; then
 
             # Instalation of the additional software packages
 
-            sudo pacman -Sy --noconfirm syncthing telegram-desktop discord chromium wine winetricks kolourpaint vivaldi krita torbrowser-launcher audacity kdiskmark gamescope mangohud qemu-full obsidian helvum libreoffice-still kdenlive steam qbittorrent zerotier-one
+            sudo pacman -Sy --noconfirm syncthing telegram-desktop discord chromium wine winetricks kolourpaint vivaldi krita audacity kdiskmark gamescope mangohud qemu-full obsidian helvum libreoffice-still kdenlive steam qbittorrent zerotier-one
 
             yay -S --noconfirm elyprismlauncher-bin feishin viber adwsteamgtk zoom onlyoffice-bin portproton
 
             flatpak install flathub com.obsproject.Studio com.github.wwmm.easyeffects -y
+
+            echo "Downloading Betterdiscordctl"
+            echo ""
+
+            curl -O https://raw.githubusercontent.com/bb010g/betterdiscordctl/master/betterdiscordctl
+            chmod +x betterdiscordctl
+            sudo mv betterdiscordctl /usr/local/bin
+            sudo betterdiscordctl self-upgrade
+            
+            sleep 1
+            echo "Betterdiscordctl was downloaded"
+            
 
             echo " "
             ;;
