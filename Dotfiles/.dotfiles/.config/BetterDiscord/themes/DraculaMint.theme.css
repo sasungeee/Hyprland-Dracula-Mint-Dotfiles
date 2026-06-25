@@ -53,18 +53,18 @@
 	--warningcolor: 		37,164,134;			/*	Warning Color		-	default:	250,166,26		-	hex:	#faa61a		*/
 	--dangercolor:  		255,85,85;			/*	Danger Color		-	default:	237,66,69		-	hex:	#ed4245		*/
 	
-	--textbrightest: 		205,205,205;			/*	Text Color 1		-	default:	255,255,255		-	hex:	#ffffff		*/
-	--textbrighter: 		202,202,202;			/*	Text Color 2		-	default:	220,221,222		-	hex:	#dcddde		*/
-	--textbright: 			185,185,185;			/*	Text Color 3		-	default:	185,187,190		-	hex:	#b9bbbe		*/
-	--textdark: 			140,140,140;			/*	Text Color 4		-	default:	142,146,151		-	hex:	#8e9297		*/
-	--textdarker: 			102,110,134;			/*	Text Color 5		-	default:	114,118,125		-	hex:	#72767d		*/
-	--textdarkest: 			41,45,62;			/*	Text Color 6		-	default:	79,84,92		-	hex:	#4f545c		*/
+	--textbrightest: 		197,200,198;			/*	Text Color 1		-	default:	255,255,255		-	hex:	#ffffff		*/
+	--textbrighter: 		197,200,198;			/*	Text Color 2		-	default:	220,221,222		-	hex:	#dcddde		*/
+	--textbright: 			37,164,135;			/*	Text Color 3		-	default:	185,187,190		-	hex:	#b9bbbe		*/
+	--textdark: 			166, 166, 166;			/*	Text Color 4		-	default:	142,146,151		-	hex:	#8e9297		*/
+	--textdarker: 			126,127,127;			/*	Text Color 5		-	default:	114,118,125		-	hex:	#72767d		*/
+	--textdarkest: 			41,62,69;			/*	Text Color 6		-	default:	79,84,92		-	hex:	#4f545c		*/
 	
-	--backgroundcode: 		41,45,62;			/*	Background Code		-	default:	60,62,79		-	hex:	#3c3e4f		*/
-	--backgroundaccent: 		41,45,62; 		/*	Background Accent	-	default:	64,68,75		-	hex:	#40444b		*/
-	--backgroundprimary: 		33,37,51;			/*	Background 1		-	default:	54,57,63		-	hex:	#36393f		*/
-	--backgroundsecondary: 		41,45,62;			/*	Background 2		-	default:	47,49,54		-	hex:	#2f3136		*/
-	--backgroundsecondaryalt: 	28,31,43;			/*	Background 3		-	default:	41,43,47		-	hex:	#292b2f		*/
-	--backgroundtertiary: 		28,31,43;			/*	Background 4		-	default:	32,34,37		-	hex:	#202225		*/
-	--backgroundfloating: 		28,31,43;				/*	Background Elevated	-	default:	24,25,28		-	hex:	#18191c		*/
+	--backgroundcode: 		42,44,57;			/*	Background Code		-	default:	60,62,79		-	hex:	#3c3e4f		*/
+	--backgroundaccent: 		42,44,57; 		/*	Background Accent	-	default:	64,68,75		-	hex:	#40444b		*/
+	--backgroundprimary: 		35,37,48;			/*	Background 1		-	default:	54,57,63		-	hex:	#36393f		*/
+	--backgroundsecondary: 		42,44,57;			/*	Background 2		-	default:	47,49,54		-	hex:	#2f3136		*/
+	--backgroundsecondaryalt: 	30,31,41;			/*	Background 3		-	default:	41,43,47		-	hex:	#292b2f		*/
+	--backgroundtertiary: 		30,31,41;			/*	Background 4		-	default:	32,34,37		-	hex:	#202225		*/
+	--backgroundfloating: 		30,31,41;				/*	Background Elevated	-	default:	24,25,28		-	hex:	#18191c		*/
 }
