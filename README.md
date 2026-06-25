@@ -59,15 +59,6 @@ chsh -s /usr/bin/fish
 ### Installing Telegram Theme (recommended)
 [Install Theme](https://t.me/addtheme/DraculaMintSasungeee)
 
-### Installing BetterDiscord (recommended)
-```
-curl -O https://raw.githubusercontent.com/bb010g/betterdiscordctl/master/betterdiscordctl
-chmod +x betterdiscordctl
-sudo mv betterdiscordctl /usr/local/bin
-sudo betterdiscordctl self-upgrade
-betterdiscordctl install
-```
-
 #
 
 The original of this markdown file was taken from [ZProger bspwm-dotfiles](https://github.com/Zproger/bspwm-dotfiles)
