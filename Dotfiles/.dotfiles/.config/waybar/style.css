@@ -9,7 +9,7 @@
 }
 
 window#waybar {
-    background-color: #23252e;
+    background-color: #232530;
     color: #C5C8C6;
 }
 
@@ -30,7 +30,7 @@ label:focus {
 /* --- workspaces settings ---------- */
 
 #workspaces {
-    background-color: #2b2d36;
+    background-color: #2a2c39;
 	margin: 4px 0px 4px 0px;
 	padding-left: 5px;
 	padding-right: 5px;
@@ -89,7 +89,7 @@ label:focus {
 }
 
 #custom-arch-rofi {
-    background-color: #2b2d36;
+    background-color: #2a2c39;
     margin: 4px 0px 4px 0px;
     padding-right: 5px;
     border-radius: 5px;
