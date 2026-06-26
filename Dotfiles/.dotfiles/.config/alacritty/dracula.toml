@@ -9,13 +9,13 @@
 
 [colors.primary]
 
-background = "#282a36"
+background = "#2a2c39"
 foreground = "#f8f8f2"
 bright_foreground = "#ffffff"
 
 [colors.cursor]
 
-text = "#282a36"
+text = "#2a2c39"
 cursor = "#f8f8f2"
 
 [colors.vi_mode_cursor]
@@ -62,15 +62,15 @@ background = "#ffb86c"
 
 [colors.footer_bar]
 
-background = "#282a36"
+background = "#2a2c39"
 foreground = "#f8f8f2"
 
 [colors.hints.start]
 
-foreground = "#282a36"
+foreground = "#2a2c39"
 background = "#f1fa8c"
 
 [colors.hints.end]
 
 foreground = "#f1fa8c"
-background = "#282a36"
+background = "#2a2c39"
