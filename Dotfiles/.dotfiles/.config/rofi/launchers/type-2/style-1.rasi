@@ -36,7 +36,7 @@ window {
     border:                      1px solid;
     border-radius:               5px;
     border-color:                #25a487;
-    background-color:            #23252e;
+    background-color:            #1e1f29;
     cursor:                      "default";
 }
 
@@ -62,7 +62,7 @@ inputbar {
     border:                      0px solid;
     border-radius:               0px;
     border-color:                #25a487;
-    background-color:            #23252e;
+    background-color:            #1e1f29;
     text-color:                  #e4f3f0;
     children:                    [ "prompt", "entry" ];
 }
@@ -84,7 +84,7 @@ entry {
     width:                       300px;
     padding:                     10px 10px;
     border-radius:               5px;
-    background-color:            #313440;
+    background-color:            #2a2c39;
     text-color:                  inherit;
     cursor:                      text;
     placeholder:                 "Search";
@@ -139,7 +139,7 @@ element {
     cursor:                      pointer;
 }
 element normal.normal {
-    background-color:            #23252e;
+    background-color:            #1e1f29;
     text-color:                  #e4f3f0;
 }
 element selected.normal {
