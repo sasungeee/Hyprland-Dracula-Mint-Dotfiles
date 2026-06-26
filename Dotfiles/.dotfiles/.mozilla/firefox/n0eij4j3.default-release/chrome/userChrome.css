@@ -20,19 +20,19 @@
 }
 
 #TabsToolbar {
-  background-color: #171923 !important;
+  background-color: #1e1f29 !important;
 }
 
 #nav-bar {
-  background-color: #1c1f2b !important;
+  background-color: #232530 !important;
 }
 
 #PersonalToolbar {
-  background-color: #1c1f2b !important;
+  background-color: #232530 !important;
 }
 
-#urlbar-background {
-  background-color: #292d3e !important;
+.urlbar-background {
+  background-color: #2a2c39 !important;
 }
 
 #urlbar-searchmode-switcher {
@@ -93,3 +93,4 @@
 #star-button-box:hover {
   background-color: #292d3e !important;
 }
+
