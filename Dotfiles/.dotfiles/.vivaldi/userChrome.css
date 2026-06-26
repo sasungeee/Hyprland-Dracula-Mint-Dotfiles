@@ -51,7 +51,7 @@ body {
 }
 
 .top {
-  background-color: #171923 !important;
+  background-color: #1e1f29 !important;
   padding-top: 2px !important;
   padding-bottom: 2px !important;
 }
@@ -64,17 +64,17 @@ body {
 
 /* Основная панель инструментов (адресная строка) */
 .toolbar-mainbar {
-  background-color: #1c1f2b !important;
+  background-color: #232530 !important;
 }
 
 /* Панель закладок */
 .bookmark-bar {
-  background-color: #1c1f2b !important;
+  background-color: #232530 !important;
 }
 
 /* Поле ввода адреса */
 .UrlBar-AddressField {
-  background-color: #292d3e !important;
+  background-color: #2A2C39 !important;
   border: none !important;
   border-radius: 5px !important;
 }
