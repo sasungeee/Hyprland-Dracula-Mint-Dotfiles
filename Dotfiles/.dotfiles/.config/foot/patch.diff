@@ -6,7 +6,7 @@
  # alpha=1.0
 -# background=002b36
 -# foreground=839496
-+background=282a36
++background=2a2c39
 +foreground=f8f8f2
  
  ## Normal/regular colors (color palette 0-7)
