@@ -55,7 +55,7 @@ if [ $? -eq 0 ]; then
 
             yay -S --noconfirm elyprismlauncher-bin feishin viber adwsteamgtk zoom onlyoffice-bin portproton
 
-            flatpak install flathub com.obsproject.Studio com.github.wwmm.easyeffects com.obsproject.Studio.Plugin.CompositeBlur com.obsproject.Studio.Plugin.MuteFilter com.obsproject.Studio.Plugin.Gstreamer com.obsproject.Studio.Plugin.GStreamerVaapi com.obsproject.Studio.Plugin.AitumMultistream com.obsproject.Studio.Plugin.OBSVkCapture -y
+            flatpak install flathub com.obsproject.Studio com.github.wwmm.easyeffects com.obsproject.Studio.Plugin.CompositeBlur com.obsproject.Studio.Plugin.MuteFilter com.obsproject.Studio.Plugin.AitumMultistream com.obsproject.Studio.Plugin.OBSVkCapture -y
 
             echo "Downloading Betterdiscordctl"
             echo ""
