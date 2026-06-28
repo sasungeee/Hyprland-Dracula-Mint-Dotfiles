@@ -39,7 +39,7 @@ if [ $? -eq 0 ]; then
     makepkg -si
 
     # Instalation of the base software packages
-    sudo pacman -Sy --noconfirm wayland xorg xorg-server xorg-xwayland hyprland xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk kitty alacritty neovim firefox pavucontrol pamixer nemo grim slurp swappy rofi rofi-calc rofi-emoji waybar mako ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji otf-font-awesome file-roller hyprpicker hypridle hyprlock btop wlsunset geoclue2 python3 swayimg swaybg nodejs npm eza fish fuse2 wl-clipboard mc udiskie vlc mpv unzip flatpak fastfetch zenity gsimplecal flameshot mission-center yad qt5ct qt5 qt5-graphicaleffects qt5-quickcontrols2 qt5-svg qt6ct sddm playerctl xed stow hyprpolkitagent gzip unrar bzip2 xz 7zip ffmpeg dav1d foot swayosd
+    sudo pacman -Sy --noconfirm wayland xorg xorg-server xorg-xwayland hyprland xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk kitty alacritty neovim firefox pavucontrol pamixer nemo grim slurp swappy rofi rofi-calc rofi-emoji waybar mako ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji otf-font-awesome file-roller hyprpicker hypridle hyprlock btop wlsunset geoclue2 python3 swayimg swaybg nodejs npm eza fish fuse2 wl-clipboard wl-clip-persist mc udiskie vlc mpv unzip flatpak fastfetch zenity gsimplecal flameshot mission-center yad qt5ct qt5 qt5-graphicaleffects qt5-quickcontrols2 qt5-svg qt6ct sddm playerctl xed stow hyprpolkitagent gzip unrar bzip2 xz 7zip ffmpeg dav1d foot swayosd
 
     yay -S --noconfirm bibata-cursor-theme-bin pwvucontrol vscodium-bin
 
