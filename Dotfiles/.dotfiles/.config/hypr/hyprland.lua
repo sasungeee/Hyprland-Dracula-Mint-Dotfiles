@@ -62,14 +62,17 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
   hl.exec_cmd("systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
   hl.exec_cmd("systemctl --user start graphical-session.target")
+
+  hl.exec_cmd("wl-clip-persist --clipboard regular")
+  
 end)
 
 
 -- Environment Variables -----------------
 
 hl.env("XCURSOR_THEME", "Bibata-Modern-Classic")
-hl.env("XCURSOR_SIZE", "21")
-hl.env("HYPRCURSOR_SIZE", "21")
+hl.env("XCURSOR_SIZE", "22")
+hl.env("HYPRCURSOR_SIZE", "22")
 
 hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
 hl.env("XDG_SESSION_TYPE", "wayland")
@@ -210,8 +213,8 @@ hl.bind("Caps_Lock", hl.dsp.exec_cmd("swayosd-client --caps-lock"), { release = 
 hl.bind(mainMod .. " + SHIFT + O", hl.dsp.exec_cmd('hyprctl clients | grep "title:" > /home/user/a.txt'))
 
 -- screenshots
-hl.bind("Print", hl.dsp.exec_cmd("flameshot gui"))
-hl.bind("SHIFT + Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f -'))
+hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp)" -t ppm - | satty --filename - --fullscreen --output-filename ~/Screenshots/satty-$(date "+%Y%m%d-%H%M%S").png'))
+hl.bind("SHIFT + Print", hl.dsp.exec_cmd("flameshot gui"))
 
 -- hyprland
 
