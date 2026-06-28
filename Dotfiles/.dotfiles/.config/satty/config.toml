@@ -1,0 +1,18 @@
+[general]
+early-exit = true
+
+annotation-size-factor = 1
+default-fill-shapes = true
+
+no-window-decoration = true
+
+[color-palette]
+palette = [
+    "#ff0000ff",
+    "#ff9900ff",
+    "#ffff00ff",
+    "#00ff00ff",
+    "#00ffffff",
+    "#0000ffff",
+    "#ff00ffff"
+]
