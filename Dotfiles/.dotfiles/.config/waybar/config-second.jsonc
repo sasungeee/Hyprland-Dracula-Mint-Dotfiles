@@ -46,7 +46,8 @@
     },
 
     "hyprland/window": {
-        "format": "{class}"
+        "format": "{class}",
+        "tooltip": false
     },
 
     // --- modules center ----------
