@@ -41,7 +41,9 @@ if [ $? -eq 0 ]; then
     # Instalation of the base software packages
     sudo pacman -Sy --noconfirm wayland xorg xorg-server xorg-xwayland hyprland xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk kitty alacritty neovim firefox pavucontrol pamixer nemo grim slurp satty rofi rofi-calc rofi-emoji waybar mako ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji otf-font-awesome file-roller hyprpicker hypridle hyprlock btop wlsunset geoclue2 python3 swayimg swaybg nodejs npm eza fish fuse2 wl-clipboard wl-clip-persist mc udiskie vlc mpv unzip flatpak fastfetch zenity gsimplecal flameshot mission-center yad qt5ct qt5 qt5-graphicaleffects qt5-quickcontrols2 qt5-svg qt6ct sddm playerctl xed stow hyprpolkitagent gzip unrar bzip2 xz 7zip ffmpeg dav1d foot swayosd code
 
-    yay -S --noconfirm bibata-cursor-theme-bin pwvucontrol
+    yay -S --noconfirm bibata-cursor-theme-bin
+
+    flatpak install flathub com.saivert.pwvucontrol
 
     case $CHOICE in
         Full)
@@ -52,8 +54,11 @@ if [ $? -eq 0 ]; then
             # Instalation of the additional software packages
 
             sudo pacman -Sy --noconfirm syncthing telegram-desktop discord chromium wine winetricks kolourpaint vivaldi krita audacity kdiskmark gamescope mangohud qemu-full obsidian helvum libreoffice-still kdenlive steam qbittorrent zerotier-one
+            
+            mkdir ~/ElyPrismLauncher/
+            curl -L https://github.com/ElyPrismLauncher/Launcher/releases/latest/download/PineconeMC-Linux-x86_64.AppImage -o ~/ElyPrismLauncher/PineconeMC-Linux-x86_64.AppImage
 
-            yay -S --noconfirm elyprismlauncher-bin feishin viber adwsteamgtk zoom onlyoffice-bin portproton
+            flatpak install flathub com.viber.Viber org.onlyoffice.desktopeditors ru.linux_gaming.PortProton -y
 
             flatpak install flathub com.obsproject.Studio com.github.wwmm.easyeffects com.obsproject.Studio.Plugin.CompositeBlur com.obsproject.Studio.Plugin.MuteFilter com.obsproject.Studio.Plugin.AitumMultistream com.obsproject.Studio.Plugin.OBSVkCapture -y
 
@@ -155,6 +160,10 @@ if [ $? -eq 0 ]; then
 
     flatpak override --user --filesystem=~/.themes
     flatpak override --user --filesystem=~/.icons
+    flatpak override --user --filesystem=~/
+    flatpak override --user --env=QT_QPA_PLATFORMTHEME=qt6ct   
+    flatpak override --user --filesystem=xdg-config/qt6ct:ro   
+    flatpak override --user --filesystem=xdg-config/qt5ct:ro 
     flatpak override --user --filesystem=xdg-config/gtk-3.0:ro
     flatpak override --user --filesystem=xdg-config/gtk-4.0:ro
     
