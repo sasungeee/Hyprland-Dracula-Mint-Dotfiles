@@ -57,6 +57,7 @@ if [ $? -eq 0 ]; then
             
             mkdir ~/ElyPrismLauncher/
             curl -L https://github.com/ElyPrismLauncher/Launcher/releases/latest/download/PineconeMC-Linux-x86_64.AppImage -o ~/ElyPrismLauncher/PineconeMC-Linux-x86_64.AppImage
+            chmod +x ~/ElyPrismLauncher/PineconeMC-Linux-x86_64.AppImage
 
             flatpak install flathub com.viber.Viber org.onlyoffice.desktopeditors ru.linux_gaming.PortProton -y
 
@@ -101,6 +102,7 @@ if [ $? -eq 0 ]; then
     mkdir -p ~/.config/vivaldi
 
     mkdir -p ~/.local/share/ElyPrismLauncher/themes
+    mkdir -p ~/.local/share/applications
 
     
     sleep 1
