@@ -1,0 +1,25 @@
+{
+    "editor.fontFamily": "'JetBrainsMono Nerd Font', 'bold', bold",
+    "editor.fontSize": 16,
+
+    "breadcrumbs.enabled": false,
+    "window.zoomLevel": 0,
+    "editor.tabSize": 4,
+    "editor.multiCursorModifier": "alt",
+    "editor.cursorBlinking": "solid",
+
+    "workbench.startupEditor": "none",
+    "[python]": {
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.defaultColorDecorators": "never"
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "python.defaultInterpreterPath": "/home/user/pythonVenv",
+    "workbench.colorTheme": "Atom One Dark",
+    "qt-core.additionalQtPaths": [
+        {
+            "name": "Qt-5.15.18-linux-g++_from_PATH",
+            "path": "/usr/bin/qmake"
+        }
+    ],
+}
