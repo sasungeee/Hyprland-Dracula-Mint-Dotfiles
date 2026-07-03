@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Name=PineconeMC
+Comment=Discover, manage, and play Minecraft instances
+Type=Application
+Terminal=false
+Exec=/home/user/ElyPrismLauncher/PineconeMC-Linux-x86_64.AppImage
+StartupNotify=true
+Icon=/home/user/ElyPrismLauncher/icon.png
+Categories=Game;ActionGame;AdventureGame;Simulation;PackageManager;
+Keywords=game;minecraft;mc;
+StartupWMClass=ElyPrismLauncher
