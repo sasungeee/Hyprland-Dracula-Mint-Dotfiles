@@ -142,6 +142,7 @@ if [ $? -eq 0 ]; then
     chmod +x ~/.dotfiles/.config/rofi/rofi-power-menu.sh
     chmod +x ~/.dotfiles/.config/hypr/rofi-power-menu-alt-f4.sh
     chmod +x ~/.dotfiles/.config/hypr/show_layout_popup.sh
+    chmod +x ~/.dotfiles/.local/share/applications/PineconeMC.desktop
 
     stow -d ~/.dotfiles/ .
 
