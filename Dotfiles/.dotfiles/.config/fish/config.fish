@@ -19,6 +19,8 @@ alias vacuum="journalctl --vacuum-size=100M"
 # Make all journal files contain no data older than 2 weeks
 alias vacuum_time="journalctl --vacuum-time=2weeks"
 
+alias sudo!!="sudo $history[1]"
+
 set -U fish_greeting
 set fish_color_command green
 set -gx EDITOR micro
