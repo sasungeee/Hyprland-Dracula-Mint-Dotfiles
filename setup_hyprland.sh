@@ -159,6 +159,8 @@ if [ $? -eq 0 ]; then
     echo "Configuring system"
     echo " "
 
+    fc-cache -fv
+
     gsettings set org.gnome.desktop.interface gtk-theme Nordic-darker-standard-buttons
     gsettings set org.gnome.desktop.interface font-name 'JetBrainsMono Nerd Font 12'
     gsettings set org.gnome.desktop.wm.preferences button-layout :
