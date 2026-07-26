@@ -239,8 +239,8 @@ hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
 
-hl.bind(mainMod .. " + mouse_up", hl.dsp.layout("move +col"))
-hl.bind(mainMod .. " + mouse_down", hl.dsp.layout("move -col"))
+hl.bind(mainMod .. " + mouse_up", hl.dsp.layout("move -col"))
+hl.bind(mainMod .. " + mouse_down", hl.dsp.layout("move +col"))
 
 -- Switch & Move window to workspace
 for i = 1, 10 do
