@@ -65,6 +65,8 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("systemctl --user start graphical-session.target")
 
   hl.exec_cmd("wl-clip-persist --clipboard regular")
+
+  hl.exec_cmd("bash ~/.config/hypr/battery.sh")
   
 end)
 
