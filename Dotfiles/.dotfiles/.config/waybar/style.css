@@ -64,7 +64,6 @@ label:focus {
 /* --- modules settings ---------- */
 
 #clock,
-#battery,
 #cpu,
 #memory,
 #pulseaudio{
@@ -81,7 +80,8 @@ label:focus {
 #custom-arch-rofi,
 #custom-btop,
 #custom-calendar,
-#custom-power {
+#custom-power,
+#custom-power-profile {
     color: #25a487;
     padding: 0 2px;
     margin: 0 2px;
@@ -99,12 +99,24 @@ label:focus {
     color: #C5C8C6;
 }
 
-#pulseaudio {
+#pulseaudio,
+#battery,
+#backlight {
     color: #25a487;
 }
 
 #pulseaudio.muted {
     color: #8a8a8a;
+}
+
+#battery.warning {
+	  color: #f17720;
+	  background-color: #1e1f29;
+}
+
+#battery.critical {
+	  color: #ff0000;
+	  background-color: #1e1f29;
 }
 
 #language {
