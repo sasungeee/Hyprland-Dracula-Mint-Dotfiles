@@ -203,22 +203,22 @@ if [ $? -eq 0 ]; then
     echo "Hyprland was successfully installed"
     echo " "
 
-    if whiptail --title "NVIDIA Driver" \
-        --yesno "Install NVIDIA 580 driver?" 10 60; then
+    if whiptail --title "Notebook Driver" \
+        --yesno "Install Notebook drivers?" 10 60; then
     
-        echo "Installing NVIDIA 580 driver..."
+        echo "Installing Notebook drivers..."
     
-        chmod +x ./install-nvidia-580.sh
-        ./install-nvidia-580.sh
+        chmod +x ./install-notebook-drivers.sh
+        bash install-notebook-drivers.sh
     
         if [ $? -eq 0 ]; then
-            echo "NVIDIA driver installed successfully"
+            echo "Notebook drivers installed successfully"
         else
-            echo "Error installing NVIDIA driver"
+            echo "Error installing Notebook drivers"
         fi
     
     else
-        echo "NVIDIA driver installation skipped"
+        echo "Notebook drivers installation skipped"
     fi
 
 else
