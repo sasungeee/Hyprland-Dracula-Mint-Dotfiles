@@ -218,7 +218,10 @@ hl.bind(mainMod .. " + SHIFT + O", hl.dsp.exec_cmd('hyprctl clients | grep "titl
 
 -- screenshots
 hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp)" -t ppm - | satty --filename - --fullscreen --output-filename ~/Screenshots/satty-$(date "+%Y%m%d-%H%M%S").png'))
-hl.bind("SHIFT + Print", hl.dsp.exec_cmd("flameshot gui"))
+hl.bind("ALT + Print", hl.dsp.exec_cmd("flameshot gui"))
+
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd('grim -g "$(slurp)" -t ppm - | satty --filename - --fullscreen --output-filename ~/Screenshots/satty-$(date "+%Y%m%d-%H%M%S").png'))
+hl.bind(mainMod .. " + ALT + SHIFT + S", hl.dsp.exec_cmd("flameshot gui"))
 
 -- hyprland
 
