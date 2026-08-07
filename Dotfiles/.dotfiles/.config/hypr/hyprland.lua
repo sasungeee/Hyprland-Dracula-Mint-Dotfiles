@@ -1,17 +1,18 @@
 
+
 -- Monitors -----------------
 
-hl.monitor({
-    output   = "DP-1",
-    mode     = "1920x1080@143.98",
-    position = "0x0",
-    scale    = "1",
-})
+--hl.monitor({
+--    output   = "DP-1",
+--    mode     = "1920x1080@143.98",
+--    position = "0x0",
+--    scale    = "1",
+--})
 
 hl.monitor({
-    output   = "DVI-D-1",
-    mode     = "1280x1024@76.00",
-    position = "1920x0",
+    output   = "eDP-1",
+    mode     = "1920x1200@60.00",
+    position = "0x0",
     scale    = "1",
 })
 
@@ -26,9 +27,9 @@ hl.workspace_rule({ workspace = "5", monitor = "DP-1" })
 hl.workspace_rule({ workspace = "6", monitor = "DP-1" })
 hl.workspace_rule({ workspace = "7", monitor = "DP-1", layout = "scrolling" })
 
-hl.workspace_rule({ workspace = "8", monitor = "DVI-D-1", layout = "scrolling" })
-hl.workspace_rule({ workspace = "9", monitor = "DVI-D-1", layout = "scrolling" })
-hl.workspace_rule({ workspace = "10", monitor = "DVI-D-1", layout = "scrolling" })
+hl.workspace_rule({ workspace = "8", monitor = "eDP-1", layout = "scrolling" })
+hl.workspace_rule({ workspace = "9", monitor = "eDP-1", layout = "scrolling" })
+hl.workspace_rule({ workspace = "10", monitor = "eDP-1", layout = "scrolling" })
 
 
 -- Programs -----------------
@@ -139,7 +140,7 @@ hl.config({
 
     scrolling = {
         fullscreen_on_one_column = true,
-        column_width = 0.99,
+        column_width = 0.5,
         follow_min_visible = 1,
         explicit_column_widths = "0.5, 0.75, 0.99",
         focus_fit_method = 1
@@ -164,7 +165,8 @@ hl.config({
         sensitivity = 0,
 
         touchpad = {
-            natural_scroll = false,
+            natural_scroll = true,
+            scroll_factor = 0.3
         },
     },
 
@@ -258,6 +260,17 @@ hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("swayosd-client --output-volume raise --max-volume 100"),       { locked = true, repeating = true })
 hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("swayosd-client --output-volume lower --max-volume 100"),       { locked = true, repeating = true })
 hl.bind("XF86AudioMute",        hl.dsp.exec_cmd("playerctl --all-players pause"), { locked = true, repeating = true })
+
+
+-- Gestures --------------------
+
+
+hl.gesture({ fingers = 4, direction = "horizontal", action = "workspace" })
+hl.gesture({ fingers = 3, direction = "horizontal", action = "scroll_move" })
+hl.gesture({ fingers = 3, direction = "up", action = "fullscreen" })
+hl.gesture({ fingers = 3, direction = "down", action = "fullscreen" })
+hl.gesture({ fingers = 4, direction = "pinch", action = "float" })
+hl.gesture({ fingers = 3, direction = "pinch", action = "float" })
 
 
 -- Windowrules -----------------
@@ -395,13 +408,21 @@ hl.window_rule({
     name = "windowrule-14",
     match = { class = "org.telegram.desktop" },
     workspace = 9,
-    scrolling_width = 0.355
+    scrolling_width = 0.35
 })
 
 hl.window_rule({
     name = "windowrule-15",
     match = { class = "discord" },
-    workspace = 9
+    workspace = 9,
+    scrolling_width = 0.65
+})
+
+hl.window_rule({
+    name = "windowrule-15",
+    match = { class = "viber" },
+    workspace = 9,
+    scrolling_width = 0.65
 })
 
 -- ZOOM annotate
