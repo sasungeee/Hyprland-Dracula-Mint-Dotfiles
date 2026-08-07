@@ -22,12 +22,14 @@
     ],
 
     "modules-right": [
+        "battery",
         "pulseaudio",
         "hyprland/language",
         "custom/calc",
         "custom/btop",
         "clock",
         "custom/network",
+        "custom/power-profile",
         "custom/power"
     ],
 
@@ -79,7 +81,8 @@
             "8": "󰈹",
             "9": "",
             "10": ""
-        }
+        },
+        "tooltip": false
     },
 
     // --- modules right ----------
@@ -92,7 +95,7 @@
             "default": ["", "", ""]
         },
         // "on-click": "bash -c 'pgrep -x pavucontrol >/dev/null && pkill -x pavucontrol || pavucontrol &'",
-	    "on-click": "bash -c 'pgrep -x pwvucontrol >/dev/null && pkill -x pwvucontrol || com.saivert.pwvucontrol &'",
+	      "on-click": "bash -c 'pgrep -x pwvucontrol >/dev/null && pkill -x pwvucontrol || com.saivert.pwvucontrol &'",
         "scroll-step": 5.0,
         "max-volume": 150,
         "tooltip": false
@@ -135,27 +138,33 @@
         "on-click": "~/.config/rofi/rofi-power-menu.sh",
         "format": "  ",
         "tooltip": false
-    }
+    },
 
     // --- also modules ----------
 
-    // "battery": {
-    //     "states": {
-    //         // "good": 95,
-    //         "warning": 30,
-    //         "critical": 15
-    //     },
-    //     "format": "{capacity}% {icon}",
-    //     "format-full": "{capacity}% {icon}",
-    //     "format-charging": "{capacity}% ",
-    //     "format-plugged": "{capacity}% ",
-    //     "format-alt": "{time} {icon}",
-    //     // "format-good": "", // An empty format will hide the module
-    //     // "format-full": "",
-    //     "format-icons": ["", "", "", "", ""]
-    // },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 5
+        },
+        "format": "{icon} <span color='#C5C8C6'>{capacity}%</span>",
+        "format-charging": "<span color='#98FBCB'></span> <span color='#C5C8C6'>{capacity}%</span>",
+        "format-alt": "<span color='#C5C8C6'>{time}</span> {icon} <span color='#C5C8C6'>{capacity}%</span>",
+        "format-icons": ["", "", "", "", ""],
+        "interval": 1,
+        "tooltip": false
+    },
 
-    // "battery#bat2": {
-    //     "bat": "BAT2"
-    // }
+    "backlight": {
+    	"device": "intel_backlight",
+    	"format": " <span color='#C5C8C6'>{percent}%</span>",
+    	"tooltip": false
+    },
+
+    "custom/power-profile": {
+        "on-click": "~/.config/rofi/power-profile.sh",
+        "format": "",
+        "tooltip": false
+    }
+
 }
