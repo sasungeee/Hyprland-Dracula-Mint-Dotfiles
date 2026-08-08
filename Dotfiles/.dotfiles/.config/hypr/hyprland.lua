@@ -417,7 +417,7 @@ hl.window_rule({
 })
 
 hl.window_rule({
-    name = "windowrule-15",
+    name = "windowrule-18",
     match = { class = "discord" },
     workspace = 9,
     scrolling_width = 0.65
