@@ -2,30 +2,30 @@
 
 -- Monitors -----------------
 
---hl.monitor({
---    output   = "DP-1",
---    mode     = "1920x1080@143.98",
---    position = "0x0",
---    scale    = "1",
---})
+hl.monitor({
+    output   = "DP-2",
+    mode     = "1920x1080@143.98",
+    position = "0x0",
+    scale    = "1",
+})
 
 hl.monitor({
     output   = "eDP-1",
     mode     = "1920x1200@60.00",
-    position = "0x0",
+    position = "1920x750",
     scale    = "1",
 })
 
 
 -- Workspaces -----------------
 
-hl.workspace_rule({ workspace = "1", monitor = "DP-1" })
-hl.workspace_rule({ workspace = "2", monitor = "DP-1" })
-hl.workspace_rule({ workspace = "3", monitor = "DP-1" })
-hl.workspace_rule({ workspace = "4", monitor = "DP-1" })
-hl.workspace_rule({ workspace = "5", monitor = "DP-1" })
-hl.workspace_rule({ workspace = "6", monitor = "DP-1" })
-hl.workspace_rule({ workspace = "7", monitor = "DP-1", layout = "scrolling" })
+hl.workspace_rule({ workspace = "1", monitor = "DP-2" })
+hl.workspace_rule({ workspace = "2", monitor = "DP-2" })
+hl.workspace_rule({ workspace = "3", monitor = "DP-2" })
+hl.workspace_rule({ workspace = "4", monitor = "DP-2" })
+hl.workspace_rule({ workspace = "5", monitor = "DP-2" })
+hl.workspace_rule({ workspace = "6", monitor = "DP-2" })
+hl.workspace_rule({ workspace = "7", monitor = "DP-2", layout = "scrolling" })
 
 hl.workspace_rule({ workspace = "8", monitor = "eDP-1", layout = "scrolling" })
 hl.workspace_rule({ workspace = "9", monitor = "eDP-1", layout = "scrolling" })
@@ -417,14 +417,14 @@ hl.window_rule({
 })
 
 hl.window_rule({
-    name = "windowrule-18",
+    name = "windowrule-15",
     match = { class = "discord" },
     workspace = 9,
     scrolling_width = 0.65
 })
 
 hl.window_rule({
-    name = "windowrule-15",
+    name = "windowrule-18",
     match = { class = "viber" },
     workspace = 9,
     scrolling_width = 0.65
