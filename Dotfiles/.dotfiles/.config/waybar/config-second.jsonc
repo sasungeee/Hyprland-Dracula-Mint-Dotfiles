@@ -30,6 +30,169 @@
         "custom/btop",
         "clock",
         "custom/network",
+        "custom/power"
+    ],
+
+    // --- modules left ----------
+
+    "cpu": {
+        "format": "<span color='#25A487'> </span> {usage}%",
+        "tooltip": false,
+        "interval": 2
+    },
+
+    "memory": {
+        "format": "<span color='#25A487'></span> {}%",
+        "tooltip": false,
+        "interval": 2
+    },
+
+    "hyprland/window": {
+        "format": "{class}",
+        "tooltip": false
+    },
+
+    // --- modules center ----------
+
+    "custom/arch-rofi": {
+        "on-click": "rofi -show drun -theme ~/.config/rofi/launchers/type-2/style-1.rasi",
+        "format": " 󰣇 ",
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "all-outputs": true,
+        "sort-by-number": true,
+        "enable-empty-workspaces": true,
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": [],
+            "8": [],
+            "9": [],
+            "10": []
+        },
+        "format-icons": {
+            "8": "󰈹",
+            "9": "",
+            "10": ""
+        },
+        "tooltip": false
+    },
+
+    // --- modules right ----------
+
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon}  <span color='#C5C8C6'>{volume}%</span>",
+        "format-muted": "",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        // "on-click": "bash -c 'pgrep -x pavucontrol >/dev/null && pkill -x pavucontrol || pavucontrol &'",
+	      "on-click": "bash -c 'pgrep -x pwvucontrol >/dev/null && pkill -x pwvucontrol || com.saivert.pwvucontrol &'",
+        "scroll-step": 5.0,
+        "max-volume": 150,
+        "tooltip": false
+    },
+
+    "hyprland/language": {
+        "format": "{short}"
+    },
+    
+    "custom/calc": {
+        "on-click": "rofi -show calc -modi calc -no-show-match -no-sort -calc-command \"echo -n '{result}'\" -theme ~/.config/rofi/launchers/type-2/style-1-calc.rasi -show drun",
+        "format": "",
+        "tooltip": false
+    },
+
+    "custom/btop": {
+        "on-click": "missioncenter",
+        "format": "",
+        "tooltip": false
+    },
+
+    "clock": {
+        // "timezone": "America/New_York"
+        "tooltip": false,
+        "interval": 1,
+        "format": "{:%H:%M:%S}",
+        "on-click": "gsimplecal"
+    },
+
+    "custom/network": {
+        "exec": "/bin/bash -c '~/.config/rofi/network-manager.sh --status --enabled-color \"#a6e3a1\" --disabled-color \"#f38ba8\"'",
+        "interval": 3,
+        "format": "{}",
+        "return-type": "text",
+        "on-click": "~/.config/rofi/network-manager.sh",
+        "tooltip": false
+    },
+
+    "custom/power": {
+        "on-click": "~/.config/rofi/rofi-power-menu.sh",
+        "format": "  ",
+        "tooltip": false
+    },
+
+    // --- also modules ----------
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 5
+        },
+        "format": "{icon} <span color='#C5C8C6'>{capacity}%</span>",
+        "format-charging": "<span color='#98FBCB'></span> <span color='#C5C8C6'>{capacity}%</span>",
+        "format-alt": "<span color='#C5C8C6'>{time}</span> {icon} <span color='#C5C8C6'>{capacity}%</span>",
+        "format-icons": ["", "", "", "", ""],
+        "interval": 1,
+        "on-click": "~/.config/rofi/power-profile.sh"
+    },
+
+    "backlight": {
+    	"device": "intel_backlight",
+    	"format": " <span color='#C5C8C6'>{percent}%</span>",
+    	"tooltip": false
+    }
+}
+{
+
+    // --- bar settings ----------
+
+    "output": "eDP-1",
+    "height": 32,
+    "width": 1900,
+    "margin-top": 5,
+    "spacing": 4, // Gaps between modules (4px)
+    
+    // --- modules position ----------
+    
+    "modules-left": [
+        "cpu",
+        "memory",
+        "hyprland/window"
+    ],
+
+    "modules-center": [
+        "custom/arch-rofi",
+        "hyprland/workspaces"
+    ],
+
+    "modules-right": [
+        "battery",
+        "pulseaudio",
+        "backlight",
+        "hyprland/language",
+        "custom/calc",
+        "custom/btop",
+        "clock",
+        "custom/network",
         "custom/power-profile",
         "custom/power"
     ],
