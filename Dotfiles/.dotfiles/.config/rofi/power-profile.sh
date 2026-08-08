@@ -17,7 +17,7 @@ choice=$(
         "$perf" \
         "$bal" \
         "$save" |
-    rofi -dmenu -p "Power Profile" -theme ~/.config/rofi/launchers/type-2/style-1-network.rasi
+    rofi -dmenu -p "Power Profile" -theme ~/.config/rofi/launchers/type-2/style-1-power-profile.rasi
 )
 
 case "$choice" in
