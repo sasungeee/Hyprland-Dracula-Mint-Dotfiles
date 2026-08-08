@@ -2,7 +2,7 @@
 
     // --- bar settings ----------
 
-    "output": "DP-1",
+    "output": "DP-2",
     "height": 32,
     "width": 1900,
     "margin-top": 5,
@@ -29,7 +29,6 @@
         "custom/btop",
         "clock",
         "custom/network",
-        "custom/power-profile",
         "custom/power"
     ],
 
@@ -152,19 +151,12 @@
         "format-alt": "<span color='#C5C8C6'>{time}</span> {icon} <span color='#C5C8C6'>{capacity}%</span>",
         "format-icons": ["", "", "", "", ""],
         "interval": 1,
-        "tooltip": false
+        "on-click": "~/.config/rofi/power-profile.sh"
     },
 
     "backlight": {
     	"device": "intel_backlight",
     	"format": " <span color='#C5C8C6'>{percent}%</span>",
     	"tooltip": false
-    },
-
-    "custom/power-profile": {
-        "on-click": "~/.config/rofi/power-profile.sh",
-        "format": "",
-        "tooltip": false
     }
-
 }
