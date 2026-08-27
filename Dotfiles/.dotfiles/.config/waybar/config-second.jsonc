@@ -313,10 +313,8 @@
         },
         "format": "{icon} <span color='#C5C8C6'>{capacity}%</span>",
         "format-charging": "<span color='#98FBCB'></span> <span color='#C5C8C6'>{capacity}%</span>",
-        "format-alt": "<span color='#C5C8C6'>{time}</span> {icon} <span color='#C5C8C6'>{capacity}%</span>",
         "format-icons": ["", "", "", "", ""],
-        "interval": 1,
-        "tooltip": false
+        "interval": 1
     },
 
     "backlight": {
