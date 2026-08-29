@@ -1,36 +1,41 @@
-/* .tabbrowser-tab[selected="true"] {
-  background-color: rgba(37, 164, 135, 15) !important;
-} */
-
-.tab-background[selected] {
+/* Активная вкладка */
+.tabbrowser-tab[selected] .tab-background {
   background-color: rgba(37, 164, 135, 0.15) !important;
   border: 1px solid #25a487 !important;
   border-radius: 5px !important;
-  color: #c5c8c6 !important;
 }
 
-.tabbrowser-tab:not([selected="true"]):hover .tab-background {
+/* Ховер на активной вкладке — оставляем тот же цвет */
+.tabbrowser-tab[selected]:hover .tab-background {
+  background-color: rgba(37, 164, 135, 0.15) !important;
+  border: 1px solid #25a487 !important;
+  border-radius: 5px !important;
+}
+
+/* Ховер на неактивных вкладках */
+.tabbrowser-tab:not([selected]):hover .tab-background {
   background-color: #292d3e !important;
   border-radius: 5px !important;
 }
 
+/* Кнопка «Новая вкладка» */
 #tabs-newtab-button:hover > .toolbarbutton-icon {
   background-color: #292d3e !important;
   border-radius: 5px !important;
 }
 
+/* Фон панели вкладок */
 #TabsToolbar {
   background-color: #1e1f29 !important;
 }
 
-#nav-bar {
-  background-color: #232530 !important;
-}
-
+/* Навбар и закладки */
+#nav-bar,
 #PersonalToolbar {
   background-color: #232530 !important;
 }
 
+/* Адресная строка */
 .urlbar-background {
   background-color: #2a2c39 !important;
 }
@@ -39,6 +44,7 @@
   background-color: #292d3e !important;
 }
 
+/* Кастомные иконки назад/вперёд */
 #back-button > .toolbarbutton-icon {
   list-style-image: none !important;
   background: url(icons/back.svg) center center no-repeat !important;
@@ -49,48 +55,20 @@
   background: url(icons/forward.svg) center center no-repeat !important;
 }
 
-#nav-bar-customization-target > .toolbarbutton-1 > .toolbarbutton-icon {
-  background-size: 14px 14px !important;
-  border-radius: 5px !important;
-}
-
-#nav-bar-customization-target > .toolbarbutton-1:hover > .toolbarbutton-icon {
-  background-color: #292d3e !important;
-}
-
-#nav-bar-customization-target > .chromeclass-toolbar-additional > .toolbarbutton-1 > .toolbarbutton-icon {
-  background-size: 14px 14px !important;
-  border-radius: 5px !important;
-}
-
-#nav-bar-customization-target > .chromeclass-toolbar-additional > .toolbarbutton-1:hover > .toolbarbutton-icon {
-  background-color: #292d3e !important;
-}
-
-#nav-bar-customization-target > .chromeclass-toolbar-additional > .unified-extensions-item-row-wrapper > .toolbarbutton-1 > .toolbarbutton-badge-stack {
-  background-size: 14px 14px !important;
-  border-radius: 5px !important;
-}
-
-#nav-bar-customization-target > .chromeclass-toolbar-additional > .unified-extensions-item-row-wrapper > .toolbarbutton-1:hover > .toolbarbutton-badge-stack {
-  background-color: #292d3e !important;
-}
-
-#PanelUI-menu-button > .toolbarbutton-badge-stack {
-  background-size: 14px 14px !important;
-  border-radius: 5px !important;
-}
-
-#PanelUI-menu-button:hover > .toolbarbutton-badge-stack {
-  background-color: #292d3e !important;
-}
-
+/* Кнопки на навбаре */
+#nav-bar-customization-target > .toolbarbutton-1 > .toolbarbutton-icon,
+#nav-bar-customization-target > .chromeclass-toolbar-additional > .toolbarbutton-1 > .toolbarbutton-icon,
+#nav-bar-customization-target > .chromeclass-toolbar-additional > .unified-extensions-item-row-wrapper > .toolbarbutton-1 > .toolbarbutton-badge-stack,
+#PanelUI-menu-button > .toolbarbutton-badge-stack,
 #star-button-box {
   background-size: 14px 14px !important;
   border-radius: 5px !important;
 }
 
+#nav-bar-customization-target > .toolbarbutton-1:hover > .toolbarbutton-icon,
+#nav-bar-customization-target > .chromeclass-toolbar-additional > .toolbarbutton-1:hover > .toolbarbutton-icon,
+#nav-bar-customization-target > .chromeclass-toolbar-additional > .unified-extensions-item-row-wrapper > .toolbarbutton-1:hover > .toolbarbutton-badge-stack,
+#PanelUI-menu-button:hover > .toolbarbutton-badge-stack,
 #star-button-box:hover {
   background-color: #292d3e !important;
 }
-
