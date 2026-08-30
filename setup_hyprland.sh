@@ -65,7 +65,7 @@ if [ $? -eq 0 ]; then
 
             flatpak install flathub com.viber.Viber org.onlyoffice.desktopeditors ru.linux_gaming.PortProton -y
 
-            flatpak install flathub com.obsproject.Studio com.github.wwmm.easyeffects com.obsproject.Studio.Plugin.CompositeBlur com.obsproject.Studio.Plugin.MuteFilter com.obsproject.Studio.Plugin.AitumMultistream com.obsproject.Studio.Plugin.OBSVkCapture -y
+            flatpak install flathub com.obsproject.Studio com.obsproject.Studio.Plugin.CompositeBlur com.obsproject.Studio.Plugin.MuteFilter com.obsproject.Studio.Plugin.AitumMultistream com.obsproject.Studio.Plugin.OBSVkCapture -y
 
             echo "Downloading Betterdiscordctl"
             echo ""
