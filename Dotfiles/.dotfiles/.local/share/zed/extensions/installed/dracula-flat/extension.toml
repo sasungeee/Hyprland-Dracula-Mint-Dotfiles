@@ -1,0 +1,23 @@
+id = "dracula-flat"
+name = "Dracula Flat"
+version = "1.0.3"
+schema_version = 1
+description = "Dracula theme (flat version) for Zed"
+repository = "https://github.com/WangWindows/dracula-theme-zed"
+authors = ["WangWindow <1598593280@qq.com>"]
+themes = ["themes/dracula-flat.json"]
+icon_themes = []
+languages = []
+capabilities = []
+
+[lib]
+
+[grammars]
+
+[language_servers]
+
+[context_servers]
+
+[agent_servers]
+
+[slash_commands]

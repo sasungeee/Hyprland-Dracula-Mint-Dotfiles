@@ -1,0 +1,29 @@
+id = "color-highlight"
+name = "Color Highlight"
+version = "0.2.2"
+schema_version = 1
+description = "Highlight colors in your editor based on color-lsp."
+repository = "https://github.com/huacnlee/color-lsp/tree/main/zed-color-highlight"
+authors = ["Jason Lee <huacnlee@gmail.com>"]
+themes = []
+icon_themes = []
+languages = []
+capabilities = []
+
+[lib]
+kind = "Rust"
+version = "0.7.0"
+
+[grammars]
+
+[language_servers.color-lsp]
+languages = ["HTML", "JSON", "JSONC", "JSON5", "Tera", "Tera (HTML)", "Tera (CSS)", "Tera (JSON)", "Tera (YAML)", "Tera (TOML)", "ERB", "JavaScript", "TypeScript", "CSS", "JSX", "TSX", "Vue.js", "YAML", "TOML", "XML", "Rust", "Ruby", "Python", "Go"]
+code_action_kinds = []
+
+[language_servers.color-lsp.language_ids]
+
+[context_servers]
+
+[agent_servers]
+
+[slash_commands]

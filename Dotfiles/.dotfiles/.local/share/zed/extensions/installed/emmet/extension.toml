@@ -1,0 +1,46 @@
+id = "emmet"
+name = "Emmet"
+version = "0.0.14"
+schema_version = 1
+description = "Emmet support"
+repository = "https://github.com/zed-extensions/emmet"
+authors = ["Piotr Osiewicz <piotr@zed.dev>"]
+themes = []
+icon_themes = []
+languages = []
+capabilities = []
+
+[lib]
+kind = "Rust"
+version = "0.7.0"
+
+[grammars]
+
+[language_servers.emmet-language-server]
+languages = ["Angular", "Blade", "CSS", "Django", "ERB", "Elixir", "HEEx", "HTML", "HTML+ERB", "JavaScript", "Jinja2", "LESS", "Liquid", "Nunjucks", "PHP", "SCSS", "Statamic Antlers", "TSX", "Twig", "Vue.js"]
+
+[language_servers.emmet-language-server.language_ids]
+SCSS = "scss"
+Blade = "blade"
+"HTML+ERB" = "eruby"
+HTML = "html"
+Nunjucks = "html"
+ERB = "eruby"
+CSS = "css"
+LESS = "less"
+PHP = "php"
+HEEx = "heex"
+TSX = "typescriptreact"
+Django = "html"
+Jinja2 = "html"
+Twig = "twig"
+"Statamic Antlers" = "html"
+JavaScript = "javascriptreact"
+Elixir = "elixir"
+Liquid = "html"
+"Vue.js" = "vue"
+Angular = "angular"
+
+[context_servers]
+
+[slash_commands]
