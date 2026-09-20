@@ -1,0 +1,27 @@
+{
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_size": 16,
+  "buffer_font_weight": 700,
+
+  "tab_size": 4,
+  "cursor_blink": false,
+
+  "multi_cursor_modifier": "alt",
+
+  "toolbar": {
+    "breadcrumbs": false
+  },
+
+  "theme": {
+    "mode": "dark",
+    "dark": "Dracula Flat",
+    "light": "Dracula Flat"
+  },
+
+  "icon_theme": "Material Icon Theme",
+  "lsp_document_colors": "background",
+
+  "auto_update_extensions": {
+      "dracula-flat": false
+  }
+}
