@@ -18,7 +18,6 @@
     "light": "Dracula Flat"
   },
 
-  "icon_theme": "Material Icon Theme",
   "lsp_document_colors": "background",
 
   "auto_update_extensions": {
