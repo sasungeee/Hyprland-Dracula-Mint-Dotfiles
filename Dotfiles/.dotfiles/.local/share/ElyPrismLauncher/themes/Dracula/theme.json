@@ -1,0 +1,29 @@
+{
+    "colors": {
+        "AlternateBase": "#282a36",
+        "Base": "#282a36",
+        "BrightText": "#ff5555",
+        "Button": "#212432",
+        "ButtonText": "#f8f8f2",
+        "Highlight": "#25a487",
+        "HighlightedText": "#f5f8f6",
+        "Link": "#8be9fd",
+        "Text": "#f8f8f2",
+        "ToolTipBase": "#f8f8f2",
+        "ToolTipText": "#f8f8f2",
+        "Window": "#1e1f29",
+        "WindowText": "#f8f8f2",
+        "fadeAmount": 0.5,
+        "fadeColor": "#6d6784"
+    },
+    "logColors": {
+        "Launcher": "#bd93f9",
+        "Error": "#ff5555",
+        "Warning": "#f1Fa8c",
+        "Debug": "#50fa7b",
+        "FatalHighlight": "#ff5555",
+        "Fatal": "#282a36"
+    },
+    "name": "Dracula",
+    "widgets": "Fusion"
+}
