@@ -9,7 +9,7 @@
   "multi_cursor_modifier": "alt",
 
   "toolbar": {
-    "breadcrumbs": false
+  "breadcrumbs": false
   },
 
   "theme": {
@@ -21,6 +21,13 @@
   "lsp_document_colors": "background",
 
   "auto_update_extensions": {
-      "dracula-flat": false
-  }
+    "dracula-flat": false
+  },
+    
+  "buffer_font_features": {
+    "calt": false,
+    "liga": false
+  },
+
+  "extend_comment_on_newline": false
 }
