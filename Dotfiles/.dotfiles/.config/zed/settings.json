@@ -1,4 +1,7 @@
 {
+  "project_panel": {
+    "dock": "left"
+  },
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_size": 16,
   "buffer_font_weight": 700,
@@ -9,7 +12,7 @@
   "multi_cursor_modifier": "alt",
 
   "toolbar": {
-  "breadcrumbs": false
+    "breadcrumbs": false
   },
 
   "theme": {
@@ -18,12 +21,13 @@
     "light": "Dracula Flat"
   },
 
+  "icon_theme": "Material Icon Theme",
   "lsp_document_colors": "background",
 
   "auto_update_extensions": {
-    "dracula-flat": false
+      "dracula-flat": false
   },
-    
+
   "buffer_font_features": {
     "calt": false,
     "liga": false
