@@ -217,10 +217,10 @@ hl.bind("Caps_Lock", hl.dsp.exec_cmd("swayosd-client --caps-lock"), { release = 
 hl.bind(mainMod .. " + SHIFT + O", hl.dsp.exec_cmd('hyprctl clients | grep "title:" > /home/user/a.txt'))
 
 -- screenshots
-hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp)" -t ppm - | satty --filename - --fullscreen --output-filename ~/Screenshots/satty-$(date "+%Y%m%d-%H%M%S").png'))
+hl.bind("Print", hl.dsp.exec_cmd("~/.config/hypr/screenshot.sh"))
 hl.bind("ALT + Print", hl.dsp.exec_cmd("flameshot gui"))
 
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd('grim -g "$(slurp)" -t ppm - | satty --filename - --fullscreen --output-filename ~/Screenshots/satty-$(date "+%Y%m%d-%H%M%S").png'))
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("~/.config/hypr/screenshot.sh"))
 hl.bind(mainMod .. " + ALT + SHIFT + S", hl.dsp.exec_cmd("flameshot gui"))
 
 -- hyprland
