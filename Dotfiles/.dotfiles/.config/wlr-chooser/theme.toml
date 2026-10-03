@@ -1,0 +1,8 @@
+accent = "#000000"
+screen-accent = "#25a487"
+window-accent = "#63d0df"
+backdrop = "#00000000"
+panel = "#282a36"
+
+font = "JetBrains Mono"
+font-size = 12.0
