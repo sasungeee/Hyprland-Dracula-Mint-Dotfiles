@@ -7,10 +7,11 @@
     "width": 1900,
     "margin-top": 5,
     "spacing": 4, // Gaps between modules (4px)
-    
+
     // --- modules position ----------
-    
+
     "modules-left": [
+        "custom/idle",
         "cpu",
         "memory",
         "hyprland/window"
@@ -24,9 +25,9 @@
     "modules-right": [
         "battery",
         "pulseaudio",
+        "backlight",
         "hyprland/language",
         "custom/calc",
-        "custom/btop",
         "clock",
         "custom/network",
         "custom/power"
@@ -34,14 +35,24 @@
 
     // --- modules left ----------
 
+    "custom/idle": {
+        "format": "{}",
+        "exec": "pgrep -x hypridle >/dev/null && echo ' 󰒲' || echo ' 󰅶'",
+        "on-click": "bash -c 'pgrep -x hypridle >/dev/null && pkill -x hypridle || hypridle &'",
+        "interval": 1,
+        "tooltip": false
+    },
+
     "cpu": {
-        "format": "<span color='#25A487'> </span> {usage}%",
+        "format": "<span color='#25A487'></span> {usage}%",
+        "on-click": "missioncenter",
         "tooltip": false,
         "interval": 2
     },
 
     "memory": {
         "format": "<span color='#25A487'></span> {}%",
+        "on-click": "missioncenter",
         "tooltip": false,
         "interval": 2
     },
@@ -103,16 +114,10 @@
     "hyprland/language": {
         "format": "{short}"
     },
-    
+
     "custom/calc": {
         "on-click": "rofi -show calc -modi calc -no-show-match -no-sort -calc-command \"echo -n '{result}'\" -theme ~/.config/rofi/launchers/type-2/style-1-calc.rasi -show drun",
         "format": "",
-        "tooltip": false
-    },
-
-    "custom/btop": {
-        "on-click": "missioncenter",
-        "format": "",
         "tooltip": false
     },
 
@@ -149,8 +154,7 @@
         "format": "{icon} <span color='#C5C8C6'>{capacity}%</span>",
         "format-charging": "<span color='#98FBCB'></span> <span color='#C5C8C6'>{capacity}%</span>",
         "format-icons": ["", "", "", "", ""],
-        "interval": 1,
-        "on-click": "~/.config/rofi/power-profile.sh"
+        "interval": 1
     },
 
     "backlight": {
