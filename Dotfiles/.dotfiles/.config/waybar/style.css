@@ -81,9 +81,10 @@ label:focus {
 #custom-btop,
 #custom-calendar,
 #custom-power,
-#custom-power-profile {
+#custom-power-profile,
+#custom-idle {
     color: #25a487;
-    padding: 0 2px;
+    padding: 0 0px;
     margin: 0 2px;
     min-width: 16px;
 }
