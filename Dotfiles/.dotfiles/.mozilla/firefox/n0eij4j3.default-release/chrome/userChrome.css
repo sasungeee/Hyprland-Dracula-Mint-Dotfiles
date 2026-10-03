@@ -1,61 +1,142 @@
-/* Активная вкладка */
+/* ===== Глобальные радиусы Nova ===== */
+:root {
+  --border-radius-xsmall: 5px !important;
+  --border-radius-small: 5px !important;
+  --border-radius-medium: 5px !important;
+  --border-radius-large: 5px !important;
+  --border-radius-xlarge: 5px !important;
+  --border-radius-circle: 5px !important;
+
+  --tab-min-height: 36px !important;
+  --toolbarbutton-border-radius: 5px !important;
+  --tab-border-radius: 5px !important;
+  --panel-border-radius: 5px !important;
+  --arrowpanel-border-radius: 5px !important;
+  --urlbar-inner-border-radius: 5px !important;
+  --urlbar-icon-border-radius: 5px !important;
+  --button-border-radius: 5px !important;
+  --urlbar-border-radius: 5px !important;
+  --urlbarview-border-radius: 5px !important;
+  --popup-border-radius: 5px !important;
+}
+
+/* ===== Превью вкладок ===== */
+#tab-preview-panel,
+.tab-preview-container,
+.tab-preview-card {
+  border-radius: 5px !important;
+  max-height: 180px !important;
+  --border-radius-large: 5px !important;
+  --border-radius-xlarge: 5px !important;
+}
+
+.tab-preview-thumbnail,
+.tab-preview-thumbnail-container,
+#tab-preview-panel .tab-preview-thumbnail {
+  max-height: 110px !important;
+  border-radius: 5px !important;
+  object-fit: cover !important;
+}
+
+.tab-tooltip,
+#tab-tooltip,
+tooltip,
+#aHTMLTooltip {
+  border-radius: 5px !important;
+}
+
+/* ===== Адресная строка ===== */
+.urlbar-background,
+#urlbar-background,
+#urlbar > .urlbar-background,
+#urlbar[focused] > .urlbar-background,
+#urlbar[open] > .urlbar-background,
+#urlbar[breakout][breakout-extend] > .urlbar-background,
+#urlbar-input-container {
+  background-color: #2a2c39 !important;
+  border-radius: 5px !important;
+  --urlbar-border-radius: 5px !important;
+}
+
+/* ===== Подсказки — только скругление (без своего цвета) ===== */
+.urlbarView-results {
+  padding: 4px !important;                 /* место для радиуса */
+}
+
+.urlbarView-row {
+  border-radius: 5px !important;
+  margin-block: 2px !important;
+  margin-inline: 6px !important;
+  overflow: hidden !important;
+}
+
+.urlbarView-row[selected],
+.urlbarView-row:hover,
+.urlbarView-row[selected]:hover {
+  border-radius: 5px !important;
+}
+
+.urlbarView-row-inner {
+  border-radius: 5px !important;
+}
+
+/* ===== Ховер на вкладках (обычные + закреплённые) ===== */
+.tabbrowser-tab:not([selected]):hover .tab-background,
+.tabbrowser-tab[pinned]:hover .tab-background,
+.tabbrowser-tab[pinned]:not([selected]):hover .tab-background,
+#tabbrowser-tabs .tabbrowser-tab[pinned]:hover .tab-background,
+.tabbrowser-tab[pinned][selected]:hover .tab-background,
+.tabbrowser-tab:not([selected]):hover .tab-content,
+.tabbrowser-tab[pinned]:hover .tab-content {
+  background-color: #292d3e !important;
+  border-radius: 5px !important;
+  margin-block: 5px !important;
+}
+
+/* ===== Активная вкладка ===== */
 .tabbrowser-tab[selected] .tab-background {
   background-color: rgba(37, 164, 135, 0.15) !important;
   border: 1px solid #25a487 !important;
   border-radius: 5px !important;
+  margin-block: 5px !important;
 }
 
-/* Ховер на активной вкладке — оставляем тот же цвет */
 .tabbrowser-tab[selected]:hover .tab-background {
   background-color: rgba(37, 164, 135, 0.15) !important;
   border: 1px solid #25a487 !important;
   border-radius: 5px !important;
 }
 
-/* Ховер на неактивных вкладках */
-.tabbrowser-tab:not([selected]):hover .tab-background {
-  background-color: #292d3e !important;
-  border-radius: 5px !important;
-}
-
-/* Кнопка «Новая вкладка» */
+/* ===== Кнопка «Новая вкладка» ===== */
 #tabs-newtab-button:hover > .toolbarbutton-icon {
   background-color: #292d3e !important;
   border-radius: 5px !important;
 }
 
-/* Фон панели вкладок */
+/* ===== Фон панелей ===== */
 #TabsToolbar {
   background-color: #1e1f29 !important;
 }
 
-/* Навбар и закладки */
 #nav-bar,
 #PersonalToolbar {
   background-color: #232530 !important;
 }
 
-/* Адресная строка */
-.urlbar-background {
-  background-color: #2a2c39 !important;
-}
-
-#urlbar-searchmode-switcher {
-  background-color: #292d3e !important;
-}
-
-/* Кастомные иконки назад/вперёд */
+/* ===== Кастомные иконки назад/вперёд ===== */
 #back-button > .toolbarbutton-icon {
   list-style-image: none !important;
   background: url(icons/back.svg) center center no-repeat !important;
+  background-size: 16px 16px !important;
 }
 
 #forward-button > .toolbarbutton-icon {
   list-style-image: none !important;
   background: url(icons/forward.svg) center center no-repeat !important;
+  background-size: 16px 16px !important;
 }
 
-/* Кнопки на навбаре */
+/* ===== Кнопки на навбаре ===== */
 #nav-bar-customization-target > .toolbarbutton-1 > .toolbarbutton-icon,
 #nav-bar-customization-target > .chromeclass-toolbar-additional > .toolbarbutton-1 > .toolbarbutton-icon,
 #nav-bar-customization-target > .chromeclass-toolbar-additional > .unified-extensions-item-row-wrapper > .toolbarbutton-1 > .toolbarbutton-badge-stack,
@@ -71,4 +152,31 @@
 #PanelUI-menu-button:hover > .toolbarbutton-badge-stack,
 #star-button-box:hover {
   background-color: #292d3e !important;
+  border-radius: 5px !important;
+}
+
+/* ===== Кнопка выбора поисковика (в самом конце, как просил) ===== */
+#urlbar-searchmode-switcher,
+.searchmode-switcher,
+#searchmode-switcher-chicklet {
+  background-color: #232530 !important;
+  border-radius: 5px !important;
+  --button-background-color: #232530 !important;
+}
+
+#urlbar-searchmode-switcher:hover,
+.searchmode-switcher:hover,
+#searchmode-switcher-chicklet:hover {
+  background-color: #292d3e !important;
+  --button-background-color: #292d3e !important;
+  border-radius: 5px !important;
+}
+
+/* ===== Кнопки в диалогах ===== */
+.popup-notification-button,
+.popup-notification-cta,
+.popup-notification button,
+panelnotification button,
+html|button {
+  border-radius: 5px !important;
 }
