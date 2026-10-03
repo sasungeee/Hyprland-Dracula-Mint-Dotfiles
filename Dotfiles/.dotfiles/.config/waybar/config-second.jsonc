@@ -37,7 +37,7 @@
 
     "custom/idle": {
         "format": "{}",
-        "exec": "pgrep -x hypridle >/dev/null && echo ' 󰒲' || echo ' 󰅶'",
+        "exec": "pgrep -x hypridle >/dev/null && echo ' 󰛊 ' || echo ' 󰅶 '",
         "on-click": "bash -c 'pgrep -x hypridle >/dev/null && pkill -x hypridle || hypridle &'",
         "interval": 1,
         "tooltip": false
