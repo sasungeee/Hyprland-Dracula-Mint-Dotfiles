@@ -39,7 +39,7 @@ if [ $? -eq 0 ]; then
     makepkg -si
 
     # Instalation of the base software packages
-    sudo pacman -Sy --noconfirm wayland xorg xorg-server xorg-xwayland hyprland xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk kitty alacritty neovim firefox pavucontrol pamixer nemo grim slurp satty rofi rofi-calc rofi-emoji waybar mako ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji otf-font-awesome file-roller hyprpicker hypridle hyprlock btop wlsunset geoclue2 python3 swayimg swaybg nodejs npm eza fish fuse2 wl-clipboard wl-clip-persist mc udiskie vlc mpv unzip flatpak fastfetch zenity gsimplecal flameshot mission-center yad qt5ct qt5 qt5-graphicaleffects qt5-quickcontrols2 qt5-svg qt6ct sddm playerctl xed stow hyprpolkitagent gzip unrar bzip2 xz 7zip ffmpeg dav1d foot swayosd code
+    sudo pacman -Sy --noconfirm wayland xorg xorg-server xorg-xwayland hyprland xdg-desktop-portal xdg-desktop-portal-wlr xdg-desktop-portal-gtk kitty alacritty neovim firefox pavucontrol pamixer nemo cosmic-files grim slurp satty rofi rofi-calc rofi-emoji waybar mako ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji otf-font-awesome file-roller hyprpicker hypridle hyprlock btop wlsunset geoclue2 python3 swayimg swaybg nodejs npm eza fish fuse2 wl-clipboard wl-clip-persist mc udiskie vlc mpv unzip flatpak fastfetch zenity gsimplecal flameshot mission-center yad qt5ct qt5 qt5-graphicaleffects qt5-quickcontrols2 qt5-svg qt6ct sddm playerctl xed stow hyprpolkitagent gzip unrar bzip2 xz 7zip ffmpeg dav1d foot swayosd code
 
     mkdir /tmp/bibata/
     curl -L https://github.com/ful1e5/Bibata_Cursor/releases/latest/download/Bibata-Modern-Classic.tar.xz -o /tmp/bibata/Bibata-Modern-Classic.tar.xz
@@ -181,12 +181,14 @@ if [ $? -eq 0 ]; then
     xdg-settings set default-web-browser firefox.desktop
     xdg-mime default firefox.desktop x-scheme-handler/http
     xdg-mime default nemo.desktop inode/directory application/x-gnome-saved-search
+    xdg-mime default foot.desktop x-scheme-handler/terminal
     xdg-mime default firefox.desktop x-scheme-handler/https
     xdg-mime default firefox.desktop text/html
 
     sudo setcap 'CAP_SYS_NICE=eip' $(which gamescope)
     
     systemctl --user enable hyprpolkitagent.service
+    systemctl --user enable xdg-desktop-portal
     
     case $CHOICE in
         Full)
