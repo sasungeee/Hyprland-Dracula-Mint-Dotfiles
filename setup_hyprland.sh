@@ -48,7 +48,7 @@ if [ $? -eq 0 ]; then
     cargo build --release
     cargo install --path .
     cd ..
-    rm -rf hyprland-preview-share-picker
+    rm -rf ./hyprland-preview-share-picker
 
     mkdir /tmp/bibata/
     curl -L https://github.com/ful1e5/Bibata_Cursor/releases/latest/download/Bibata-Modern-Classic.tar.xz -o /tmp/bibata/Bibata-Modern-Classic.tar.xz
