@@ -66,7 +66,7 @@ if [ $? -eq 0 ]; then
 
             # Instalation of the additional software packages
 
-            sudo pacman -Sy syncthing telegram-desktop discord chromium wine winetricks kolourpaint vivaldi krita audacity kdiskmark gamescope mangohud qemu-full obsidian helvum libreoffice-still kdenlive steam qbittorrent zerotier-one
+            sudo pacman -Sy syncthing telegram-desktop discord chromium wine winetricks kolourpaint vivaldi krita audacity kdiskmark gamescope mangohud qemu-full obsidian helvum libreoffice-still kdenlive steam qbittorrent zerotier-one v4l2loopback-dkms
             
             mkdir ~/ElyPrismLauncher/
             curl -L https://github.com/ElyPrismLauncher/Launcher/releases/latest/download/PineconeMC-Linux-x86_64.AppImage -o ~/ElyPrismLauncher/PineconeMC-Linux-x86_64.AppImage
