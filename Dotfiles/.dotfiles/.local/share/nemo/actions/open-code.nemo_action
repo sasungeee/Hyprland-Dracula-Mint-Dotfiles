@@ -1,0 +1,7 @@
+[Nemo Action]
+Name=Open in Code-OSS
+Comment=Open folder in code-oss
+Exec=code "%F"
+Icon-Name=code
+Selection=any
+Extensions=dir;

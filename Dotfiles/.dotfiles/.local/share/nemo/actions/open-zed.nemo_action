@@ -1,0 +1,7 @@
+[Nemo Action]
+Name=Open in ZED
+Comment=Open folder in Zeditor
+Exec=zeditor "%F"
+Icon-Name=zed
+Selection=any
+Extensions=dir;
