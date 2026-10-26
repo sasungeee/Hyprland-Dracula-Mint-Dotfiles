@@ -12,7 +12,7 @@ hl.monitor({
 hl.monitor({
     output   = "eDP-1",
     mode     = "1920x1200@60.00",
-    position = "1920x750",
+    position = "1920x0",
     scale    = "1",
 })
 
@@ -41,7 +41,7 @@ local menu        = "rofi -show drun -theme ~/.config/rofi/launchers/type-7/styl
 
 -- Autostart -----------------
 
-hl.on("hyprland.start", function () 
+hl.on("hyprland.start", function ()
 
   hl.exec_cmd("wlsunset -t 3500 -T 3501")
   hl.exec_cmd("mako")
@@ -56,8 +56,10 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("discord")
   hl.exec_cmd("firefox")
 
-  hl.exec_cmd("waybar --config ~/.config/waybar/config.jsonc --style ~/.config/waybar/style.css")
-  hl.exec_cmd("waybar --config ~/.config/waybar/config-second.jsonc --style ~/.config/waybar/style.css")
+  -- hl.exec_cmd("waybar --config ~/.config/waybar/config.jsonc --style ~/.config/waybar/style.css")
+  -- hl.exec_cmd("waybar --config ~/.config/waybar/config-second.jsonc --style ~/.config/waybar/style.css")
+  hl.exec_cmd("qs -c waybar-clone-dp2")
+  hl.exec_cmd("qs -c waybar-clone-edp1")
   hl.exec_cmd("feishin")
 
   hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
@@ -67,7 +69,7 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("wl-clip-persist --clipboard regular")
 
   hl.exec_cmd("bash ~/.config/hypr/battery.sh")
-  
+
 end)
 
 
@@ -164,7 +166,7 @@ hl.config({
 
         follow_mouse = 1,
 
-        sensitivity = 0,
+        sensitivity = -0.5,
 
         touchpad = {
             natural_scroll = true,
@@ -176,10 +178,15 @@ hl.config({
         no_warps = true,
         no_hardware_cursors = 1,
     },
-    
+
     binds = {
         scroll_event_delay = 50,
     }
+})
+
+hl.device({
+    name = "ftcs0038:00-2808:0106-touchpad",
+    sensitivity = -0.2    -- только для тачпада
 })
 
 -- Animations -----------------
@@ -232,13 +239,16 @@ hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_cmd("playerctl --all-players paus
 hl.bind(mainMod .. " + S", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
 
-local function reloadWaybar()
-    hl.dispatch(hl.dsp.exec_cmd("pkill waybar"))
-    hl.dispatch(hl.dsp.exec_cmd("waybar --config ~/.config/waybar/config.jsonc --style ~/.config/waybar/style.css &"))
-    hl.dispatch(hl.dsp.exec_cmd("waybar --config ~/.config/waybar/config-second.jsonc --style ~/.config/waybar/style.css &"))
+local function reloadBar()
+    -- hl.dispatch(hl.dsp.exec_cmd("pkill waybar"))
+    -- hl.dispatch(hl.dsp.exec_cmd("waybar --config ~/.config/waybar/config.jsonc --style ~/.config/waybar/style.css &"))
+    -- hl.dispatch(hl.dsp.exec_cmd("waybar --config ~/.config/waybar/config-second.jsonc --style ~/.config/waybar/style.css &"))
+    hl.dispatch(hl.dsp.exec_cmd("pkill qs"))
+    hl.dispatch(hl.dsp.exec_cmd("qs -c waybar-clone-dp2 &"))
+    hl.dispatch(hl.dsp.exec_cmd("qs -c waybar-clone-edp1 &"))
 end
 
-hl.bind(mainMod .. " + SHIFT + Y", reloadWaybar)
+hl.bind(mainMod .. " + SHIFT + Y", reloadBar)
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
@@ -335,7 +345,7 @@ hl.window_rule({
 -- Flameshot
 hl.window_rule({
     name = "windowrule-6",
-    match = { 
+    match = {
         class = "flameshot",
         title = "flameshot"
     },
@@ -379,7 +389,7 @@ hl.window_rule({
 
 hl.window_rule({
     name = "windowrule-10",
-    match = { 
+    match = {
         class = "^$",
         title = "^$",
         xwayland = true,
