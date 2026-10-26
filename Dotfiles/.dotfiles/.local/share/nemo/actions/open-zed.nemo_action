@@ -1,6 +1,6 @@
 [Nemo Action]
-Name=Open in ZED
-Comment=Open folder in Zeditor
+Name=Open with ZED
+Comment=Open folder with Zeditor
 Exec=zeditor "%F"
 Icon-Name=zed
 Selection=any
