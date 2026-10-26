@@ -1,6 +1,6 @@
 [Nemo Action]
-Name=Open in Code-OSS
-Comment=Open folder in code-oss
+Name=Open with Code-OSS
+Comment=Open folder with code-oss
 Exec=code "%F"
 Icon-Name=code
 Selection=any
