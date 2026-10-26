@@ -34,6 +34,14 @@ Item {
     property int volumeWheelRemainder: 0
     property int brightnessWheelRemainder: 0
     property bool batteryExpansionOpen: false
+    // Expose only the actual bar and the temporary battery popup as input areas
+    // for the containing PanelWindow. The window itself must stay tall enough
+    // for the popup animation, but its transparent remainder must be click-through.
+    property var panelItem: panel
+    readonly property real batteryPopupX: panel.x + batteryExpansion.x
+    readonly property real batteryPopupY: panel.y + batteryExpansion.y
+    readonly property real batteryPopupWidth: batteryExpansion.width
+    readonly property real batteryPopupHeight: batteryExpansion.height
     property var languageFields: languagePoll.value.split("|")
     property string languageShort: languageFields.length > 0 && languageFields[0].length > 0 ? languageFields[0] : "??"
     property var occupiedIds: occupiedPoll.value.length > 0 ? occupiedPoll.value.split(",") : []
