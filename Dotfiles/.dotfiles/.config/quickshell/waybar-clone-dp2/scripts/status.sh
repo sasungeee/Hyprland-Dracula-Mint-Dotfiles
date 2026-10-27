@@ -154,37 +154,19 @@ case "${1:-}" in
     ;;
 
   language)
-    # Read the active layout from Hyprland. Some builds omit active_keymap in
-    # JSON, so fall back to the text output from `hyprctl devices`.
-    devices_json=$(hyprctl devices -j 2>/dev/null || printf '{}')
-    keymap=$(printf '%s' "$devices_json" | jq -r '
-      ([.keyboards[]? | select(.main == true) | .active_keymap? | select(type == "string" and length > 0)][0]) //
-      ([.keyboards[]? | .active_keymap? | select(type == "string" and length > 0)][0]) // empty
-    ' 2>/dev/null | head -n1)
+    # Hyprland may report the currently selected layout on only one keyboard.
+    # Pick the first active keymap that differs from the default English (US),
+    # matching the working layout-detection logic used by the user's notification.
+    layouts=$(hyprctl devices 2>/dev/null | awk -F': ' '/active keymap:/ { print $2 }')
+    keymap=$(printf '%s\n' "$layouts" | grep -v -F -x 'English (US)' | head -n 1 || true)
+    [ -n "$keymap" ] || keymap='English (US)'
 
-    if [ -z "$keymap" ]; then
-      keymap=$(hyprctl devices 2>/dev/null | awk '
-        /Keyboard at / { current=0 }
-        /main: yes/ { current=1 }
-        /active keymap:/ {
-          line=$0
-          sub(/^.*active keymap:[[:space:]]*/, "", line)
-          if (current) { print line; found=1; exit }
-          if (fallback == "") fallback=line
-        }
-        END { if (!found && fallback != "") print fallback }
-      ' | head -n1)
-    fi
-
-    keymap=$(printf '%s' "$keymap" | sed 's/^[[:space:]]*//; s/[[:space:]]*$//')
     lower=$(printf '%s' "$keymap" | tr '[:upper:]' '[:lower:]')
-    short=''
     case "$lower" in
       *ukrainian*|*ukrain*) short='ua' ;;
       *russian*) short='ru' ;;
       *english*uk*|*british*|*united\ kingdom*|*uk\ english*) short='gb' ;;
-      *english*us*|*united\ states*|*american*|*us\ english*) short='us' ;;
-      *english*) short='us' ;;
+      *english*us*|*united\ states*|*american*|*us\ english*|*english*) short='us' ;;
       *german*|*deutsch*) short='de' ;;
       *french*) short='fr' ;;
       *polish*|*polski*) short='pl' ;;
@@ -204,13 +186,24 @@ case "${1:-}" in
       *korean*) short='kr' ;;
       *chinese*) short='zh' ;;
       *)
-        # Preserve a two-letter code in parentheses, e.g. English (US).
-        code=$(printf '%s' "$keymap" | sed -nE 's/.*\(([A-Za-z]{2})\).*/\1/p' | head -n1)
-        if [ -n "$code" ]; then short=$(printf '%s' "$code" | tr '[:upper:]' '[:lower:]'); fi
-        [ -n "$short" ] || short='??'
+        code=$(printf '%s' "$keymap" | sed -nE 's/.*\(([A-Za-z]{2})\).*/\1/p' | head -n 1)
+        if [ -n "$code" ]; then short=$(printf '%s' "$code" | tr '[:upper:]' '[:lower:]'); else short='??'; fi
         ;;
     esac
-    printf '%s|%s\n' "$short" "${keymap:-Keyboard layout unavailable}"
+    printf '%s|%s\n' "$short" "$keymap"
+    ;;
+
+  capslock)
+    # Read the lock state from the main keyboard block reported by Hyprland.
+    # The `capsLock` line is immediately followed later by `main: yes` in the
+    # same device block; do not accidentally use a virtual keyboard's state.
+    hyprctl devices 2>/dev/null | awk '
+      /Keyboards:/ { in_keyboards=1; next }
+      /Tablets:/ { in_keyboards=0 }
+      in_keyboards && /^[[:space:]]*capsLock:/ { current=$2 }
+      in_keyboards && /^[[:space:]]*main: yes/ { print (current == "yes" ? "yes" : "no"); found=1; exit }
+      END { if (!found) print "unknown" }
+    '
     ;;
 
   volume)
