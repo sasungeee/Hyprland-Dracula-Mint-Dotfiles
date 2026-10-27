@@ -210,7 +210,7 @@ hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind("ALT + SPACE", hl.dsp.exec_cmd(menu))
 
-hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("~/.config/hypr/show_layout_popup.sh"))
+-- hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("~/.config/hypr/show_layout_popup.sh"))
 
 hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd("hyprpicker -n"))
 
@@ -219,7 +219,7 @@ hl.bind(mainMod .. " + PERIOD", hl.dsp.exec_cmd('rofi -modi emoji -show emoji -k
 hl.bind("ALT + F4", hl.dsp.exec_cmd("~/.config/rofi/rofi-power-menu-alt-f4.sh"))
 hl.bind("ALT + 4", hl.dsp.exec_cmd("~/.config/rofi/rofi-power-menu-alt-f4.sh"))
 
-hl.bind("Caps_Lock", hl.dsp.exec_cmd("swayosd-client --caps-lock"), { release = true, ignore_mods = true })
+-- hl.bind("Caps_Lock", hl.dsp.exec_cmd("swayosd-client --caps-lock"), { release = true, ignore_mods = true })
 
 hl.bind(mainMod .. " + SHIFT + O", hl.dsp.exec_cmd('hyprctl clients | grep "title:" > /home/user/a.txt'))
 
@@ -272,8 +272,10 @@ hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 -- Volume
 
-hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("swayosd-client --output-volume raise --max-volume 100"),       { locked = true, repeating = true })
-hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("swayosd-client --output-volume lower --max-volume 100"),       { locked = true, repeating = true })
+-- hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("swayosd-client --output-volume raise --max-volume 100"),       { locked = true, repeating = true })
+-- hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("swayosd-client --output-volume lower --max-volume 100"),       { locked = true, repeating = true })pamixer -i 5 pamixer -d 5
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("pamixer -i 5"),       { locked = true, repeating = true })
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("pamixer -d 5"),       { locked = true, repeating = true })
 hl.bind("XF86AudioMute",        hl.dsp.exec_cmd("playerctl --all-players pause"), { locked = true, repeating = true })
 
 
