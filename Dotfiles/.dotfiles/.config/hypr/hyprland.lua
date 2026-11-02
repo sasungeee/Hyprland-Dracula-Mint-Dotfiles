@@ -60,7 +60,9 @@ hl.on("hyprland.start", function ()
   -- hl.exec_cmd("waybar --config ~/.config/waybar/config-second.jsonc --style ~/.config/waybar/style.css")
   hl.exec_cmd("qs -c waybar-clone-dp2")
   hl.exec_cmd("qs -c waybar-clone-edp1")
-  hl.exec_cmd("feishin")
+  
+  --hl.exec_cmd("feishin")
+  hl.exec_cmd("com.github.wwmm.easyeffects")
 
   hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
   hl.exec_cmd("systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
@@ -442,19 +444,8 @@ hl.window_rule({
     scrolling_width = 0.65
 })
 
--- ZOOM annotate
-hl.window_rule({
-    name = "windowrule-16",
-    match = { title = "annotate_toolbar" },
-    float = true,
-    no_anim = true,
-    no_initial_focus = true,
-    size = "50 50",
-    move = "35 ((monitor_h * 1) - 145)"
-})
-
 hl.window_rule({
     name = "windowrule-17",
-    match = { class = "feishin" },
+    match = { class = "com.github.wwmm.easyeffects" },
     workspace = 10
 })
