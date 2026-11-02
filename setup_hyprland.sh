@@ -66,7 +66,7 @@ if [ $? -eq 0 ]; then
 
             # Instalation of the additional software packages
 
-            sudo pacman -Sy syncthing telegram-desktop discord chromium wine winetricks kolourpaint vivaldi krita audacity kdiskmark gamescope mangohud qemu-full obsidian helvum libreoffice-still kdenlive steam qbittorrent zerotier-one v4l2loopback-dkms
+            sudo pacman -Sy syncthing telegram-desktop discord chromium wine winetricks kolourpaint vivaldi krita audacity kdiskmark gamescope mangohud qemu-full obsidian helvum libreoffice-still kdenlive steam qbittorrent zerotier-one v4l2loopback-dkms realtime-privileges
             
             mkdir ~/ElyPrismLauncher/
             curl -L https://github.com/ElyPrismLauncher/Launcher/releases/latest/download/PineconeMC-Linux-x86_64.AppImage -o ~/ElyPrismLauncher/PineconeMC-Linux-x86_64.AppImage
@@ -74,7 +74,9 @@ if [ $? -eq 0 ]; then
 
             flatpak install flathub com.viber.Viber org.onlyoffice.desktopeditors ru.linux_gaming.PortProton -y
 
-            flatpak install flathub com.obsproject.Studio com.obsproject.Studio.Plugin.CompositeBlur com.obsproject.Studio.Plugin.MuteFilter com.obsproject.Studio.Plugin.AitumMultistream com.obsproject.Studio.Plugin.OBSVkCapture -y
+            flatpak install flathub com.obsproject.Studio com.obsproject.Studio.Plugin.CompositeBlur com.obsproject.Studio.Plugin.MuteFilter com.obsproject.Studio.Plugin.AitumMultistream com.obsproject.Studio.Plugin.OBSVkCapture com.github.wwmm.easyeffects -y
+
+            sudo usermod -aG audio,realtime $USER
 
             echo "Downloading Betterdiscordctl"
             echo ""
