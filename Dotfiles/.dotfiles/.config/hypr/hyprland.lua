@@ -452,3 +452,9 @@ hl.window_rule({
     match = { class = "com.github.wwmm.easyeffects" },
     workspace = 10
 })
+
+hl.window_rule({
+    name = "windowrule-18",
+    match = { class = "REAPER" },
+    workspace = 10
+})
