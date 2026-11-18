@@ -39,7 +39,7 @@ if [ $? -eq 0 ]; then
     makepkg -si
 
     # Instalation of the base software packages
-    sudo pacman -Sy --noconfirm wayland xorg xorg-server xorg-xwayland hyprland xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-wlr xdg-desktop-portal-gtk kitty alacritty neovim firefox pavucontrol pamixer nemo cosmic-files grim slurp satty rofi rofi-calc rofi-emoji waybar quickshell mako ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji otf-font-awesome file-roller hyprpicker hypridle hyprlock btop wlsunset geoclue2 python3 swayimg swaybg nodejs npm eza fish fuse2 wl-clipboard wl-clip-persist mc udiskie vlc mpv unzip flatpak fastfetch zenity gsimplecal flameshot mission-center yad qt5ct qt5 qt5-graphicaleffects qt5-quickcontrols2 qt5-svg qt6ct sddm playerctl xed stow hyprpolkitagent gzip unrar bzip2 xz 7zip ffmpeg dav1d foot swayosd code zed rustup
+    sudo pacman -Sy --noconfirm wayland xorg xorg-server xorg-xwayland hyprland xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-wlr xdg-desktop-portal-gtk kitty alacritty neovim firefox pavucontrol pamixer nemo cosmic-files grim slurp satty rofi rofi-calc rofi-emoji waybar quickshell mako ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji otf-font-awesome file-roller hyprpicker hypridle hyprlock btop wlsunset geoclue2 python3 swayimg swaybg nodejs npm eza fish fuse2 wl-clipboard wl-clip-persist mc udiskie vlc mpv unzip flatpak fastfetch zenity gsimplecal flameshot mission-center yad qt5ct qt5 qt5-graphicaleffects qt5-quickcontrols2 qt5-svg qt6ct sddm playerctl xed stow hyprpolkitagent gzip unrar bzip2 xz 7zip ffmpeg dav1d foot swayosd code zed rustup tree-sitter-cli wget
 
     cargo install wlr-chooser
 
@@ -66,7 +66,7 @@ if [ $? -eq 0 ]; then
 
             # Instalation of the additional software packages
 
-            sudo pacman -Sy syncthing telegram-desktop discord chromium wine winetricks kolourpaint vivaldi krita audacity kdiskmark gamescope mangohud qemu-full obsidian helvum libreoffice-still kdenlive steam qbittorrent zerotier-one v4l2loopback-dkms realtime-privileges reaper
+            sudo pacman -Sy syncthing telegram-desktop discord chromium wine winetricks kolourpaint vivaldi krita audacity kdiskmark gamescope mangohud qemu-full obsidian libreoffice-still kdenlive steam qbittorrent zerotier-one v4l2loopback-dkms realtime-privileges reaper qgraphctl
             
             mkdir ~/ElyPrismLauncher/
             curl -L https://github.com/ElyPrismLauncher/Launcher/releases/latest/download/PineconeMC-Linux-x86_64.AppImage -o ~/ElyPrismLauncher/PineconeMC-Linux-x86_64.AppImage
