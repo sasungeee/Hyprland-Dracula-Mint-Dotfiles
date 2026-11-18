@@ -34,7 +34,7 @@ hl.workspace_rule({ workspace = "10", monitor = "eDP-1", layout = "scrolling" })
 
 -- Programs -----------------
 
-local terminal    = "foot"
+local terminal    = "foot tmux"
 local fileManager = "nemo"
 local menu        = "rofi -show drun -theme ~/.config/rofi/launchers/type-7/style-2.rasi"
 
