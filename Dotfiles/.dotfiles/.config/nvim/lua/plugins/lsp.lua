@@ -1,0 +1,17 @@
+vim.lsp.enable({
+    "bash-language-server",
+    "clangd",
+    "css-lsp",
+    "html-lsp",
+    "json-lsp",
+    "lua-language-server",
+    "marksman",
+    "pyright",
+    "rust-analyzer",
+    "taplo",
+    "typescript-language-server",
+    "vim-language-server",
+    "yaml-language-server",
+    "emmet-language-server",
+    "emmet-ls",
+})
