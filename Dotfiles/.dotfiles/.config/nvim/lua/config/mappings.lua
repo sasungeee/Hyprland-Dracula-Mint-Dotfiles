@@ -1,4 +1,9 @@
+-- NeoVim
 vim.g.mapleader = " "
+vim.keymap.set({ 'n', 'v' }, 'd', '"_d', { noremap = true })
+vim.keymap.set({ 'n', 'v' }, 'x', '"_x', { noremap = true })
+vim.keymap.set({ 'n', 'v' }, 'c', '"_c', { noremap = true })
+vim.keymap.set('v', 'p', '"_dP', { noremap = true })
 
 -- NeoTree
 vim.keymap.set('n', '<leader>e', ':Neotree float focus<CR>')
