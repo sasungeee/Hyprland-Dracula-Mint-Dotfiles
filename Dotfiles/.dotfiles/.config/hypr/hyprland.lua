@@ -63,9 +63,7 @@ hl.on("hyprland.start", function ()
 
   -- hl.exec_cmd("feishin")
   -- hl.exec_cmd("com.github.wwmm.easyeffects")
-  hl.exec_cmd("reaper")
-  
-  hl.exec_cmd("bash ~/.config/hypr/reaper-autolink.sh")
+  -- hl.exec_cmd("reaper")
 
   hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
   hl.exec_cmd("systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
@@ -74,6 +72,9 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("wl-clip-persist --clipboard regular")
 
   hl.exec_cmd("bash ~/.config/hypr/battery.sh")
+
+  hl.exec_cmd("bash ~/.config/hypr/reaper-autolink.sh")
+  hl.exec_cmd("qpwgraph")
 
 end)
 
@@ -456,5 +457,12 @@ hl.window_rule({
 hl.window_rule({
     name = "windowrule-18",
     match = { class = "REAPER" },
+    workspace = 10,
+    scrolling_width = 0.85
+})
+
+hl.window_rule({
+    name = "windowrule-19",
+    match = { class = "org.rncbc.qpwgraph" },
     workspace = 10
 })
