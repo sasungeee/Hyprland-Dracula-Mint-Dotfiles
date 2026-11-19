@@ -1,0 +1,7 @@
+[Nemo Action]
+Name=Open with Neovim
+Comment=Open with Neovim
+Exec=foot tmux new-session -c "%F" sh -c "nvim .; exec $SHELL"
+Icon-Name=neovim
+Selection=any
+Extensions=dir;
