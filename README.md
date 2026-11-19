@@ -45,7 +45,7 @@
 
 ### Installing Hyprland
 ```
-git clone https://github.com/Vl0di4/Hyprland-Dracula-Mint-Dotfiles
+git clone https://github.com/sasungeee/Hyprland-Dracula-Mint-Dotfiles
 cd Hyprland-Dracula-Mint-Dotfiles
 chmod +x setup_hyprland.sh
 bash setup_hyprland.sh
