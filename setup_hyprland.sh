@@ -178,7 +178,7 @@ if [ $? -eq 0 ]; then
     gsettings set org.gnome.desktop.interface gtk-theme Nordic-darker-standard-buttons
     gsettings set org.gnome.desktop.interface font-name 'JetBrainsMono Nerd Font 12'
     gsettings set org.gnome.desktop.wm.preferences button-layout :
-    gsettings set org.cinnamon.desktop.default-applications.terminal exec "foot"
+    gsettings set org.cinnamon.desktop.default-applications.terminal exec "foot tmux"
     gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
     flatpak override --user --filesystem=~/.themes
